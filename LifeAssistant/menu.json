@@ -1,0 +1,47 @@
+{
+    "title":"menu",
+    "item":[
+                {
+                "id":"homePage",
+                "title":"Home",
+                "default":true,
+                "uiView":"HomePage",
+                "params":{},
+                "defaultImage":"",
+                "selectedImage":"",
+                "type":"menuitem"
+                },
+                {
+                "id":"live",
+                "title":"Live",
+                "default":false,
+                "uiView":"LivePage",
+                "params":{},
+                "defaultImage":"",
+                "selectedImage":"",
+                "type":"menuitem"
+                },
+                {
+                "id":"mallPage",
+                "title":"Mall",
+                "default":false,
+                "uiView":"MallPage",
+                "params":{},
+                "defaultImage":"",
+                "selectedImage":"",
+                "type":"menuitem"
+                },
+                {
+                "id":"mePage",
+                "title":"me",
+                "default":false,
+                "uiView":"MePage",
+                "params":{},
+                "defaultImage":"",
+                "selectedImage":"",
+                "type":"menuitem"
+                }
+            ],
+    "description":"The menu items under More",
+    "type":"menu"
+}

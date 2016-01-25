@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GMTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] init];
+    self.window.backgroundColor = [UIColor whiteColor];
+    GMTabBarViewController *rootViewController = [[GMTabBarViewController alloc] init];
+    self.window.rootViewController = rootViewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

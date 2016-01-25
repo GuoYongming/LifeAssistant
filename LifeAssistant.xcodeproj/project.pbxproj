@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A8A333F1C520C5400BDD2E3 /* GMConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A333E1C520C5400BDD2E3 /* GMConfigurationManager.m */; };
+		1AAF0E151C5224E500696C5C /* GMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF0E0D1C5224E500696C5C /* GMHomeViewController.m */; };
+		1AAF0E161C5224E500696C5C /* GMHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF0E0E1C5224E500696C5C /* GMHomeViewController.xib */; };
+		1AAF0E1C1C5224FD00696C5C /* GMMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF0E1A1C5224FD00696C5C /* GMMallViewController.m */; };
+		1AAF0E1D1C5224FD00696C5C /* GMMallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF0E1B1C5224FD00696C5C /* GMMallViewController.xib */; };
+		1AAF0E211C52251300696C5C /* GMMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF0E1F1C52251300696C5C /* GMMeViewController.m */; };
+		1AAF0E221C52251300696C5C /* GMMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF0E201C52251300696C5C /* GMMeViewController.xib */; };
+		1AAF0E2A1C52287100696C5C /* GMViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF0E291C52287100696C5C /* GMViewControllerManager.m */; };
+		1AB229FB1C52304E006A37BC /* GMViewControllerShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB229FA1C52304E006A37BC /* GMViewControllerShared.m */; };
+		1AB229FD1C55B03F006A37BC /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB229FC1C55B03F006A37BC /* menu.json */; };
+		1AB22A011C55C51B006A37BC /* GMLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB229FF1C55C51B006A37BC /* GMLiveViewController.m */; };
+		1AB22A021C55C51B006A37BC /* GMLiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB22A001C55C51B006A37BC /* GMLiveViewController.xib */; };
 		1AD9DEB11C5206C600444842 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEB01C5206C600444842 /* main.m */; };
-		1AD9DEB41C5206C600444842 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEB31C5206C600444842 /* AppDelegate.m */; };
-		1AD9DEB71C5206C600444842 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEB61C5206C600444842 /* ViewController.m */; };
 		1AD9DEBA1C5206C600444842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD9DEB81C5206C600444842 /* Main.storyboard */; };
 		1AD9DEBC1C5206C600444842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD9DEBB1C5206C600444842 /* Assets.xcassets */; };
 		1AD9DEBF1C5206C600444842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD9DEBD1C5206C600444842 /* LaunchScreen.storyboard */; };
 		1AD9DECA1C5206C700444842 /* LifeAssistantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEC91C5206C700444842 /* LifeAssistantTests.m */; };
 		1AD9DED51C5206C700444842 /* LifeAssistantUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DED41C5206C700444842 /* LifeAssistantUITests.m */; };
+		1AD9DEE91C5207CF00444842 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEE41C5207CF00444842 /* AppDelegate.m */; };
+		1AD9DEEF1C52084400444842 /* GMViewShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEEE1C52084400444842 /* GMViewShared.m */; };
+		1AD9DEF21C52092300444842 /* GMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEF11C52092300444842 /* GMTabBarViewController.m */; };
+		1AD9DEF51C52094A00444842 /* GMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEF41C52094A00444842 /* GMNavigationController.m */; };
+		1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +50,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A8A333D1C520C5400BDD2E3 /* GMConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMConfigurationManager.h; sourceTree = "<group>"; };
+		1A8A333E1C520C5400BDD2E3 /* GMConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMConfigurationManager.m; sourceTree = "<group>"; };
+		1AAF0E051C5222E500696C5C /* LifeAssistan-Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeAssistan-Definition.h"; sourceTree = "<group>"; };
+		1AAF0E0C1C5224E500696C5C /* GMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHomeViewController.h; sourceTree = "<group>"; };
+		1AAF0E0D1C5224E500696C5C /* GMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHomeViewController.m; sourceTree = "<group>"; };
+		1AAF0E0E1C5224E500696C5C /* GMHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMHomeViewController.xib; sourceTree = "<group>"; };
+		1AAF0E191C5224FD00696C5C /* GMMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMallViewController.h; sourceTree = "<group>"; };
+		1AAF0E1A1C5224FD00696C5C /* GMMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMallViewController.m; sourceTree = "<group>"; };
+		1AAF0E1B1C5224FD00696C5C /* GMMallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMMallViewController.xib; sourceTree = "<group>"; };
+		1AAF0E1E1C52251300696C5C /* GMMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMeViewController.h; sourceTree = "<group>"; };
+		1AAF0E1F1C52251300696C5C /* GMMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMeViewController.m; sourceTree = "<group>"; };
+		1AAF0E201C52251300696C5C /* GMMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMMeViewController.xib; sourceTree = "<group>"; };
+		1AAF0E281C52287100696C5C /* GMViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMViewControllerManager.h; sourceTree = "<group>"; };
+		1AAF0E291C52287100696C5C /* GMViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMViewControllerManager.m; sourceTree = "<group>"; };
+		1AB229F91C52304E006A37BC /* GMViewControllerShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMViewControllerShared.h; sourceTree = "<group>"; };
+		1AB229FA1C52304E006A37BC /* GMViewControllerShared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMViewControllerShared.m; sourceTree = "<group>"; };
+		1AB229FC1C55B03F006A37BC /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		1AB229FE1C55C51B006A37BC /* GMLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLiveViewController.h; sourceTree = "<group>"; };
+		1AB229FF1C55C51B006A37BC /* GMLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLiveViewController.m; sourceTree = "<group>"; };
+		1AB22A001C55C51B006A37BC /* GMLiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMLiveViewController.xib; sourceTree = "<group>"; };
 		1AD9DEAC1C5206C600444842 /* LifeAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD9DEB01C5206C600444842 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1AD9DEB21C5206C600444842 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1AD9DEB31C5206C600444842 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1AD9DEB51C5206C600444842 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1AD9DEB61C5206C600444842 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1AD9DEB91C5206C600444842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AD9DEBB1C5206C600444842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AD9DEBE1C5206C600444842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +82,16 @@
 		1AD9DED01C5206C700444842 /* LifeAssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeAssistantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD9DED41C5206C700444842 /* LifeAssistantUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeAssistantUITests.m; sourceTree = "<group>"; };
 		1AD9DED61C5206C700444842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AD9DEE31C5207CF00444842 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1AD9DEE41C5207CF00444842 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AD9DEED1C52084400444842 /* GMViewShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMViewShared.h; sourceTree = "<group>"; };
+		1AD9DEEE1C52084400444842 /* GMViewShared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMViewShared.m; sourceTree = "<group>"; };
+		1AD9DEF01C52092300444842 /* GMTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTabBarViewController.h; sourceTree = "<group>"; };
+		1AD9DEF11C52092300444842 /* GMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTabBarViewController.m; sourceTree = "<group>"; };
+		1AD9DEF31C52094A00444842 /* GMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNavigationController.h; sourceTree = "<group>"; };
+		1AD9DEF41C52094A00444842 /* GMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNavigationController.m; sourceTree = "<group>"; };
+		1AE6EE391C52162C008CA2B9 /* GMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMenuItem.h; sourceTree = "<group>"; };
+		1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +119,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A8A333C1C520C1400BDD2E3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A333D1C520C5400BDD2E3 /* GMConfigurationManager.h */,
+				1A8A333E1C520C5400BDD2E3 /* GMConfigurationManager.m */,
+				1AAF0E281C52287100696C5C /* GMViewControllerManager.h */,
+				1AAF0E291C52287100696C5C /* GMViewControllerManager.m */,
+			);
+			name = Managers;
+			path = LifeAssistant/Managers;
+			sourceTree = SOURCE_ROOT;
+		};
+		1AAF0E0B1C5224E500696C5C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF0E0C1C5224E500696C5C /* GMHomeViewController.h */,
+				1AAF0E0D1C5224E500696C5C /* GMHomeViewController.m */,
+				1AAF0E0E1C5224E500696C5C /* GMHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1AAF0E131C5224E500696C5C /* Mall */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF0E191C5224FD00696C5C /* GMMallViewController.h */,
+				1AAF0E1A1C5224FD00696C5C /* GMMallViewController.m */,
+				1AAF0E1B1C5224FD00696C5C /* GMMallViewController.xib */,
+			);
+			path = Mall;
+			sourceTree = "<group>";
+		};
+		1AAF0E141C5224E500696C5C /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF0E1E1C52251300696C5C /* GMMeViewController.h */,
+				1AAF0E1F1C52251300696C5C /* GMMeViewController.m */,
+				1AAF0E201C52251300696C5C /* GMMeViewController.xib */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		1AB229F51C522C88006A37BC /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				1AB229FE1C55C51B006A37BC /* GMLiveViewController.h */,
+				1AB229FF1C55C51B006A37BC /* GMLiveViewController.m */,
+				1AB22A001C55C51B006A37BC /* GMLiveViewController.xib */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		1AD9DEA31C5206C600444842 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +194,18 @@
 		1AD9DEAE1C5206C600444842 /* LifeAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				1AD9DEB21C5206C600444842 /* AppDelegate.h */,
-				1AD9DEB31C5206C600444842 /* AppDelegate.m */,
-				1AD9DEB51C5206C600444842 /* ViewController.h */,
-				1AD9DEB61C5206C600444842 /* ViewController.m */,
+				1AD9DEE21C5207CF00444842 /* Application */,
+				1AD9DEE51C5207CF00444842 /* Models */,
+				1AD9DEE61C5207CF00444842 /* Pad */,
+				1AD9DEE71C5207CF00444842 /* Phone */,
+				1AD9DEE81C5207CF00444842 /* Shared */,
+				1A8A333C1C520C1400BDD2E3 /* Managers */,
 				1AD9DEB81C5206C600444842 /* Main.storyboard */,
 				1AD9DEBB1C5206C600444842 /* Assets.xcassets */,
 				1AD9DEBD1C5206C600444842 /* LaunchScreen.storyboard */,
 				1AD9DEC01C5206C600444842 /* Info.plist */,
+				1AAF0E051C5222E500696C5C /* LifeAssistan-Definition.h */,
+				1AB229FC1C55B03F006A37BC /* menu.json */,
 				1AD9DEAF1C5206C600444842 /* Supporting Files */,
 			);
 			path = LifeAssistant;
@@ -138,6 +235,57 @@
 				1AD9DED61C5206C700444842 /* Info.plist */,
 			);
 			path = LifeAssistantUITests;
+			sourceTree = "<group>";
+		};
+		1AD9DEE21C5207CF00444842 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1AD9DEE31C5207CF00444842 /* AppDelegate.h */,
+				1AD9DEE41C5207CF00444842 /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1AD9DEE51C5207CF00444842 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6EE391C52162C008CA2B9 /* GMMenuItem.h */,
+				1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AD9DEE61C5207CF00444842 /* Pad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pad;
+			sourceTree = "<group>";
+		};
+		1AD9DEE71C5207CF00444842 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF0E0B1C5224E500696C5C /* Home */,
+				1AB229F51C522C88006A37BC /* Live */,
+				1AAF0E131C5224E500696C5C /* Mall */,
+				1AAF0E141C5224E500696C5C /* Me */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		1AD9DEE81C5207CF00444842 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1AD9DEF01C52092300444842 /* GMTabBarViewController.h */,
+				1AD9DEF11C52092300444842 /* GMTabBarViewController.m */,
+				1AD9DEF31C52094A00444842 /* GMNavigationController.h */,
+				1AD9DEF41C52094A00444842 /* GMNavigationController.m */,
+				1AD9DEED1C52084400444842 /* GMViewShared.h */,
+				1AD9DEEE1C52084400444842 /* GMViewShared.m */,
+				1AB229F91C52304E006A37BC /* GMViewControllerShared.h */,
+				1AB229FA1C52304E006A37BC /* GMViewControllerShared.m */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +395,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD9DEBF1C5206C600444842 /* LaunchScreen.storyboard in Resources */,
+				1AAF0E1D1C5224FD00696C5C /* GMMallViewController.xib in Resources */,
+				1AAF0E221C52251300696C5C /* GMMeViewController.xib in Resources */,
+				1AAF0E161C5224E500696C5C /* GMHomeViewController.xib in Resources */,
+				1AB22A021C55C51B006A37BC /* GMLiveViewController.xib in Resources */,
 				1AD9DEBC1C5206C600444842 /* Assets.xcassets in Resources */,
+				1AB229FD1C55B03F006A37BC /* menu.json in Resources */,
 				1AD9DEBA1C5206C600444842 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +426,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD9DEB71C5206C600444842 /* ViewController.m in Sources */,
-				1AD9DEB41C5206C600444842 /* AppDelegate.m in Sources */,
+				1AD9DEE91C5207CF00444842 /* AppDelegate.m in Sources */,
+				1AD9DEF21C52092300444842 /* GMTabBarViewController.m in Sources */,
+				1AAF0E151C5224E500696C5C /* GMHomeViewController.m in Sources */,
+				1AB229FB1C52304E006A37BC /* GMViewControllerShared.m in Sources */,
 				1AD9DEB11C5206C600444842 /* main.m in Sources */,
+				1AAF0E1C1C5224FD00696C5C /* GMMallViewController.m in Sources */,
+				1AD9DEEF1C52084400444842 /* GMViewShared.m in Sources */,
+				1AAF0E211C52251300696C5C /* GMMeViewController.m in Sources */,
+				1A8A333F1C520C5400BDD2E3 /* GMConfigurationManager.m in Sources */,
+				1AD9DEF51C52094A00444842 /* GMNavigationController.m in Sources */,
+				1AB22A011C55C51B006A37BC /* GMLiveViewController.m in Sources */,
+				1AAF0E2A1C52287100696C5C /* GMViewControllerManager.m in Sources */,
+				1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +579,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = LifeAssistant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GM.LifeAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +593,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = LifeAssistant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GM.LifeAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,6 +670,7 @@
 				1AD9DEDB1C5206C700444842 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AD9DEDC1C5206C700444842 /* Build configuration list for PBXNativeTarget "LifeAssistantTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +679,7 @@
 				1AD9DEDE1C5206C700444842 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AD9DEDF1C5206C700444842 /* Build configuration list for PBXNativeTarget "LifeAssistantUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +688,7 @@
 				1AD9DEE11C5206C700444842 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

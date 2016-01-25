@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  GMMeViewController.h
 //  LifeAssistant
 //
 //  Created by GuoYongming on 1/22/16.
 //  Copyright © 2016 GuoYongming. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GMViewControllerShared.h"
 
-@interface ViewController : UIViewController
-
+@interface GMMeViewController : GMViewControllerShared
 
 @end
-
