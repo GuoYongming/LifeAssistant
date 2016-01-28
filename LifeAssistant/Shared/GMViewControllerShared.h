@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "GMMenuItem.h"
+#import "GMSubViewItem.h"
+#import "GMDataProvider.h"
 
-@interface GMViewControllerShared : UIViewController
+@interface GMViewControllerShared : UIViewController <GMDataProviderDelegate>
 @property (nonatomic, strong) GMMenuItem *menuItem;
+@property (nonatomic, strong) GMSubViewItem *subviewItem;
 @end

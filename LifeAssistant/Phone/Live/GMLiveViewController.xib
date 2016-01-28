@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GMLiveViewController">
             <connections>
+                <outlet property="mainTableView" destination="ldr-64-ogj" id="EIh-0I-2IC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldr-64-ogj">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="XXK-1b-CiO"/>
+                        <outlet property="delegate" destination="-1" id="waH-7k-HlE"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ldr-64-ogj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZTl-uA-pzx"/>
+                <constraint firstAttribute="trailing" secondItem="ldr-64-ogj" secondAttribute="trailing" id="dGx-7H-l6k"/>
+                <constraint firstAttribute="bottom" secondItem="ldr-64-ogj" secondAttribute="bottom" id="ffz-63-dK0"/>
+                <constraint firstItem="ldr-64-ogj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zeN-TC-gDS"/>
+            </constraints>
         </view>
     </objects>
 </document>

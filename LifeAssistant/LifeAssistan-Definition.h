@@ -11,3 +11,7 @@
 
 
 #endif /* LifeAssistan_Definition_h */
+
+#define kPhoneLocationRequestUrl            @"http://apis.juhe.cn/mobile/get"
+
+

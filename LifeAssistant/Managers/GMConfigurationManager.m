@@ -8,6 +8,7 @@
 
 #import "GMConfigurationManager.h"
 #import "GMMenuItem.h"
+#import "GMSubViewItem.h"
 
 @implementation GMConfigurationManager
 
@@ -32,24 +33,6 @@
 
 - (NSArray *)configMenuItems
 {
-//    
-//    NSString * path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"json"];
-//    NSData * responseData = [NSData dataWithContentsOfFile:path];
-//    NSString *jsonStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-//    
-//    NSError *err = nil;
-//    NSData *data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
-//    id jsonValue = [NSJSONSerialization JSONObjectWithData:data
-//                                                   options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves
-//                                                     error:&err];
-//    
-//    if(err){
-//        NSLog(@"%@", [err localizedDescription]);
-//        return nil;
-//    }
-
-    
-    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"json"];
     NSData *jsonData = [[NSData alloc]initWithContentsOfFile:filePath];
     
@@ -74,6 +57,32 @@
         
     }
     return menuItems;
+}
+
+- (NSArray *)configSubViewItems
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"LifePageList" ofType:@"json"];
+    NSData *jsonData = [[NSData alloc]initWithContentsOfFile:filePath];
+    
+    NSError *error = nil;
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&error];
+    NSMutableArray *items = [NSMutableArray array];
+    if (dictionary) {
+        NSArray *infoArray = [dictionary objectForKey:@"item"];
+        for (NSDictionary *itemDictionaty in infoArray) {
+            GMSubViewItem *item = [[GMSubViewItem alloc] init];
+            item.subviewId = [itemDictionaty objectForKey:@"id"];
+            item.title = [itemDictionaty objectForKey:@"title"];
+            item.uiView = [itemDictionaty objectForKey:@"uiView"];
+            item.displayImage = [itemDictionaty objectForKey:@"displayImage"];
+            item.params = [itemDictionaty objectForKey:@"params"];
+            item.type = [itemDictionaty objectForKey:@"type"];
+            [items addObject:item];
+        }
+    }else{
+        
+    }
+    return items;
 }
 
 @end

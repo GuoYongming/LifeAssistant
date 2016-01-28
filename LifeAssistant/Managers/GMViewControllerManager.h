@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "GMViewControllerShared.h"
 #import "GMNavigationController.h"
+#import "GMSubViewItem.h"
 
 @interface GMViewControllerManager : NSObject
 + (GMViewControllerManager *)sharedManager;
 - (GMViewControllerShared *)createMenuViewControllersWithMenuItem:(GMMenuItem *)menuItem;
+- (GMViewControllerShared *)createSubViewControllersWithMenuItem:(GMSubViewItem *)subviewItem;
 @end

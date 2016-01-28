@@ -29,7 +29,7 @@
     }
     return self;
 }
-
+// create tabbar item method
 - (GMViewControllerShared *)createMenuViewControllersWithMenuItem:(GMMenuItem *)menuItem
 {
     @try {
@@ -51,6 +51,33 @@
         
         GMViewControllerShared * childVC = [[class alloc] initWithNibName:nibName bundle:nil];
         childVC.menuItem = menuItem;
+        return childVC;
+        
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
+}
+
+// create common view method
+- (GMViewControllerShared *)createSubViewControllersWithMenuItem:(GMSubViewItem *)subviewItem
+{
+    @try {
+        NSString * classString = nil;
+        if ([subviewItem.uiView isEqualToString:@"PhoneLocation"]) {
+            classString = @"GMPhoneLocationViewController";
+        }
+        
+        Class class = NSClassFromString(classString);
+        
+        NSString * nibPath = [[NSBundle mainBundle] pathForResource:classString ofType:@"nib"];
+        NSString * nibName = nibPath?classString:nil;
+        
+        GMViewControllerShared * childVC = [[class alloc] initWithNibName:nibName bundle:nil];
+        childVC.subviewItem = subviewItem;
         return childVC;
         
     }

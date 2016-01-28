@@ -12,11 +12,8 @@
 
 + (GMConfigurationManager *)sharedManager;
 
-/**
- *  comfig tabbar item
- *
- *  @return tabbars
- */
 - (NSArray *)configMenuItems;
+
+- (NSArray *)configSubViewItems;
 
 @end

@@ -3,7 +3,7 @@
     "item":[
                 {
                 "id":"homePage",
-                "title":"Home",
+                "title":"首页",
                 "default":true,
                 "uiView":"HomePage",
                 "params":{},
@@ -13,7 +13,7 @@
                 },
                 {
                 "id":"live",
-                "title":"Live",
+                "title":"生活",
                 "default":false,
                 "uiView":"LivePage",
                 "params":{},
@@ -23,7 +23,7 @@
                 },
                 {
                 "id":"mallPage",
-                "title":"Mall",
+                "title":"商城",
                 "default":false,
                 "uiView":"MallPage",
                 "params":{},
@@ -33,7 +33,7 @@
                 },
                 {
                 "id":"mePage",
-                "title":"me",
+                "title":"我的",
                 "default":false,
                 "uiView":"MePage",
                 "params":{},
