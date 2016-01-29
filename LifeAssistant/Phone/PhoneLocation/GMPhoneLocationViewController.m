@@ -8,6 +8,7 @@
 
 #import "GMPhoneLocationViewController.h"
 #import "GMPhoneLocationProvider.h"
+#include "AppDelegate.h"
 
 @interface GMPhoneLocationViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTF;
@@ -42,6 +43,8 @@
     if ([self.phoneNumberTF isFirstResponder]) {
         [self.phoneNumberTF resignFirstResponder];
     }
+    [self showFullIndicator];
+    
     [self.phoneLocationProvider fetchPhoneLocationDataWithPhoneNumber:self.phoneNumberTF.text];
 }
 
@@ -56,6 +59,7 @@
 
 - (void)requestSuccess:(GMDataProvider *)provider
 {
+    [self hideFullIndicator];
     if (provider == self.phoneLocationProvider) {
         [self outPutResult];
     }
@@ -63,7 +67,7 @@
 
 - (void)requestFailed:(GMDataProvider *)provider
 {
-    
+    [self hideFullIndicator];
 }
 
 @end

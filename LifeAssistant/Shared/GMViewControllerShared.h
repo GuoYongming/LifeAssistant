@@ -10,8 +10,12 @@
 #import "GMMenuItem.h"
 #import "GMSubViewItem.h"
 #import "GMDataProvider.h"
+#import "GMIndicatorView.h"
 
 @interface GMViewControllerShared : UIViewController <GMDataProviderDelegate>
 @property (nonatomic, strong) GMMenuItem *menuItem;
 @property (nonatomic, strong) GMSubViewItem *subviewItem;
+
+- (void)showFullIndicator;
+- (void)hideFullIndicator;
 @end

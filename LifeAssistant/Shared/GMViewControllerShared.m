@@ -9,7 +9,7 @@
 #import "GMViewControllerShared.h"
 
 @interface GMViewControllerShared ()
-
+@property (nonatomic, strong) GMIndicatorView *indicator;
 @end
 
 @implementation GMViewControllerShared
@@ -22,6 +22,31 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showFullIndicator
+{
+    if (!self.indicator) {
+        self.indicator = [[GMIndicatorView alloc] initWithFrame:self.view.bounds];
+        [self.view addSubview:self.indicator];
+    }
+}
+
+- (void)hideFullIndicator
+{
+    if (self.indicator) {
+        [self.indicator removeFromSuperview];
+    }
+}
+
+-(void)requestSuccess:(GMDataProvider *)provider
+{
+    
+}
+
+-(void)requestFailed:(GMDataProvider *)provider
+{
+    
 }
 
 /*

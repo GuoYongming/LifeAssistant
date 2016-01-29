@@ -27,6 +27,7 @@
 		1AB9836F1C5A029B00EE31C6 /* GMPhoneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9836E1C5A029B00EE31C6 /* GMPhoneInfo.m */; };
 		1AB983721C5A044E00EE31C6 /* GMDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB983711C5A044E00EE31C6 /* GMDataProvider.m */; };
 		1AB983751C5A047700EE31C6 /* GMPhoneLocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB983741C5A047700EE31C6 /* GMPhoneLocationProvider.m */; };
+		1AB9838A1C5AFCDB00EE31C6 /* GMIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB983891C5AFCDB00EE31C6 /* GMIndicatorView.m */; };
 		1AD9DEB11C5206C600444842 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEB01C5206C600444842 /* main.m */; };
 		1AD9DEBA1C5206C600444842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD9DEB81C5206C600444842 /* Main.storyboard */; };
 		1AD9DEBC1C5206C600444842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD9DEBB1C5206C600444842 /* Assets.xcassets */; };
@@ -93,6 +94,8 @@
 		1AB983711C5A044E00EE31C6 /* GMDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDataProvider.m; sourceTree = "<group>"; };
 		1AB983731C5A047700EE31C6 /* GMPhoneLocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhoneLocationProvider.h; sourceTree = "<group>"; };
 		1AB983741C5A047700EE31C6 /* GMPhoneLocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhoneLocationProvider.m; sourceTree = "<group>"; };
+		1AB983881C5AFCDB00EE31C6 /* GMIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMIndicatorView.h; sourceTree = "<group>"; };
+		1AB983891C5AFCDB00EE31C6 /* GMIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMIndicatorView.m; sourceTree = "<group>"; };
 		1AD9DEAC1C5206C600444842 /* LifeAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD9DEB01C5206C600444842 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AD9DEB91C5206C600444842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -212,6 +215,22 @@
 			path = PhoneLocation;
 			sourceTree = "<group>";
 		};
+		1AB983761C5AF86100EE31C6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		1AB983871C5AFCAF00EE31C6 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				1AB983881C5AFCDB00EE31C6 /* GMIndicatorView.h */,
+				1AB983891C5AFCDB00EE31C6 /* GMIndicatorView.m */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
 		1AD9DEA31C5206C600444842 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +256,8 @@
 		1AD9DEAE1C5206C600444842 /* LifeAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				1AB983871C5AFCAF00EE31C6 /* External */,
+				1AB983761C5AF86100EE31C6 /* Library */,
 				1AD9DEE21C5207CF00444842 /* Application */,
 				1AD9DEE51C5207CF00444842 /* Models */,
 				1AD9DEE61C5207CF00444842 /* Pad */,
@@ -547,6 +568,7 @@
 				1AB983681C59AC8400EE31C6 /* GMPhoneLocationViewController.m in Sources */,
 				1AB983601C59A6CD00EE31C6 /* GMSubViewItem.m in Sources */,
 				1AB22A011C55C51B006A37BC /* GMLiveViewController.m in Sources */,
+				1AB9838A1C5AFCDB00EE31C6 /* GMIndicatorView.m in Sources */,
 				1AB9836C1C59B6BE00EE31C6 /* GMAccessManager.m in Sources */,
 				1AAF0E2A1C52287100696C5C /* GMViewControllerManager.m in Sources */,
 				1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */,
