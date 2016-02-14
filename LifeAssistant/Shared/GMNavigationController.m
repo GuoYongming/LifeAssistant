@@ -24,6 +24,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
+    item.title = @"";
+    viewController.navigationItem.backBarButtonItem = item;
+    [super pushViewController:viewController animated:animated];
+    
+}
+
 /*
 #pragma mark - Navigation
 

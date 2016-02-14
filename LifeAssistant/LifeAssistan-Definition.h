@@ -12,6 +12,6 @@
 
 #endif /* LifeAssistan_Definition_h */
 
-#define kPhoneLocationRequestUrl            @"http://apis.juhe.cn/mobile/get"
-
-
+#define kPhoneLocationRequestUrl        @"http://apis.juhe.cn/mobile/get"
+#define kHistoryEventRequestUrl         @"http://v.juhe.cn/todayOnhistory/queryEvent.php"
+#define kHistoryEventDetalRequestUrl    @"http://v.juhe.cn/todayOnhistory/queryDetail.php"

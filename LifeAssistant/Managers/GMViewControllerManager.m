@@ -70,6 +70,9 @@
         if ([subviewItem.uiView isEqualToString:@"PhoneLocation"]) {
             classString = @"GMPhoneLocationViewController";
         }
+        else if ([subviewItem.uiView isEqualToString:@"HistoryToday"]){
+            classString = @"GMHistoryEventController";
+        }
         
         Class class = NSClassFromString(classString);
         

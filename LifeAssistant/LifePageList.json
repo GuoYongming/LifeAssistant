@@ -8,6 +8,14 @@
             "params":{},
             "displayImage":"",
             "type":"menuitem"
+            },
+            {
+            "id":"historyToday",
+            "title":"历史上的今天",
+            "uiView":"HistoryToday",
+            "params":{},
+            "displayImage":"",
+            "type":"menuitem"
             }
             ],
     "description":"The menu items under More",

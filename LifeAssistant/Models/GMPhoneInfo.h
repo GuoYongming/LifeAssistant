@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface GMPhoneInfo : NSObject
-@property (nonatomic, copy) NSString *province;         // 省
-@property (nonatomic, copy) NSString *company;          // 公司
-@property (nonatomic, copy) NSString *city;             // 市
-@property (nonatomic, copy) NSString *areaCode;         // 区号
-@property (nonatomic, copy) NSString *cardType;         // 卡类型
-@property (nonatomic, copy) NSString *zipCode;          // 邮编
+@property (nonatomic, copy) NSString *province;
+@property (nonatomic, copy) NSString *company;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *areaCode;
+@property (nonatomic, copy) NSString *cardType;
+@property (nonatomic, copy) NSString *zipCode;
 @end

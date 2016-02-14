@@ -38,6 +38,16 @@
 		1AD9DEEF1C52084400444842 /* GMViewShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEEE1C52084400444842 /* GMViewShared.m */; };
 		1AD9DEF21C52092300444842 /* GMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEF11C52092300444842 /* GMTabBarViewController.m */; };
 		1AD9DEF51C52094A00444842 /* GMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEF41C52094A00444842 /* GMNavigationController.m */; };
+		1AE19E521C700E6B0033F087 /* GMHistoryEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E501C700E6B0033F087 /* GMHistoryEventController.m */; };
+		1AE19E531C700E6B0033F087 /* GMHistoryEventController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE19E511C700E6B0033F087 /* GMHistoryEventController.xib */; };
+		1AE19E561C700F760033F087 /* GMHistoryEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E551C700F760033F087 /* GMHistoryEventProvider.m */; };
+		1AE19E591C7012270033F087 /* GMHistoryEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E581C7012270033F087 /* GMHistoryEvent.m */; };
+		1AE19E601C701A520033F087 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E5F1C701A520033F087 /* NSDate+Helper.m */; };
+		1AE19E641C7020E30033F087 /* GMHistoryEventDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E621C7020E30033F087 /* GMHistoryEventDetailController.m */; };
+		1AE19E651C7020E30033F087 /* GMHistoryEventDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE19E631C7020E30033F087 /* GMHistoryEventDetailController.xib */; };
+		1AE19E681C702ADA0033F087 /* GMHistoryEventDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E671C702ADA0033F087 /* GMHistoryEventDetail.m */; };
+		1AE19E6C1C7043BB0033F087 /* GMHistoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E6A1C7043BB0033F087 /* GMHistoryViewCell.m */; };
+		1AE19E6D1C7043BB0033F087 /* GMHistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE19E6B1C7043BB0033F087 /* GMHistoryViewCell.xib */; };
 		1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */; };
 		EA28A07166B9E87DD6F5DEC0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51215ED8BB6AF7D39F1B710B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -116,6 +126,23 @@
 		1AD9DEF11C52092300444842 /* GMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTabBarViewController.m; sourceTree = "<group>"; };
 		1AD9DEF31C52094A00444842 /* GMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNavigationController.h; sourceTree = "<group>"; };
 		1AD9DEF41C52094A00444842 /* GMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNavigationController.m; sourceTree = "<group>"; };
+		1AE19E4F1C700E6B0033F087 /* GMHistoryEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryEventController.h; sourceTree = "<group>"; };
+		1AE19E501C700E6B0033F087 /* GMHistoryEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryEventController.m; sourceTree = "<group>"; };
+		1AE19E511C700E6B0033F087 /* GMHistoryEventController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMHistoryEventController.xib; sourceTree = "<group>"; };
+		1AE19E541C700F760033F087 /* GMHistoryEventProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryEventProvider.h; sourceTree = "<group>"; };
+		1AE19E551C700F760033F087 /* GMHistoryEventProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryEventProvider.m; sourceTree = "<group>"; };
+		1AE19E571C7012270033F087 /* GMHistoryEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryEvent.h; sourceTree = "<group>"; };
+		1AE19E581C7012270033F087 /* GMHistoryEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryEvent.m; sourceTree = "<group>"; };
+		1AE19E5E1C701A520033F087 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		1AE19E5F1C701A520033F087 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		1AE19E611C7020E30033F087 /* GMHistoryEventDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryEventDetailController.h; sourceTree = "<group>"; };
+		1AE19E621C7020E30033F087 /* GMHistoryEventDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryEventDetailController.m; sourceTree = "<group>"; };
+		1AE19E631C7020E30033F087 /* GMHistoryEventDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMHistoryEventDetailController.xib; sourceTree = "<group>"; };
+		1AE19E661C702ADA0033F087 /* GMHistoryEventDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryEventDetail.h; sourceTree = "<group>"; };
+		1AE19E671C702ADA0033F087 /* GMHistoryEventDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryEventDetail.m; sourceTree = "<group>"; };
+		1AE19E691C7043BB0033F087 /* GMHistoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryViewCell.h; sourceTree = "<group>"; };
+		1AE19E6A1C7043BB0033F087 /* GMHistoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryViewCell.m; sourceTree = "<group>"; };
+		1AE19E6B1C7043BB0033F087 /* GMHistoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMHistoryViewCell.xib; sourceTree = "<group>"; };
 		1AE6EE391C52162C008CA2B9 /* GMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMenuItem.h; sourceTree = "<group>"; };
 		1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMenuItem.m; sourceTree = "<group>"; };
 		51215ED8BB6AF7D39F1B710B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +283,7 @@
 		1AD9DEAE1C5206C600444842 /* LifeAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				1AE19E5A1C70199E0033F087 /* Category */,
 				1AB983871C5AFCAF00EE31C6 /* External */,
 				1AB983761C5AF86100EE31C6 /* Library */,
 				1AD9DEE21C5207CF00444842 /* Application */,
@@ -320,6 +348,10 @@
 				1AB9835F1C59A6CD00EE31C6 /* GMSubViewItem.m */,
 				1AB9836D1C5A029B00EE31C6 /* GMPhoneInfo.h */,
 				1AB9836E1C5A029B00EE31C6 /* GMPhoneInfo.m */,
+				1AE19E571C7012270033F087 /* GMHistoryEvent.h */,
+				1AE19E581C7012270033F087 /* GMHistoryEvent.m */,
+				1AE19E661C702ADA0033F087 /* GMHistoryEventDetail.h */,
+				1AE19E671C702ADA0033F087 /* GMHistoryEventDetail.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,6 +366,7 @@
 		1AD9DEE71C5207CF00444842 /* Phone */ = {
 			isa = PBXGroup;
 			children = (
+				1AE19E4E1C700E3A0033F087 /* HistoryEvent */,
 				1AB983611C59AAE800EE31C6 /* PhoneLocation */,
 				1AAF0E0B1C5224E500696C5C /* Home */,
 				1AB229F51C522C88006A37BC /* Live */,
@@ -358,6 +391,33 @@
 				1AB983711C5A044E00EE31C6 /* GMDataProvider.m */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		1AE19E4E1C700E3A0033F087 /* HistoryEvent */ = {
+			isa = PBXGroup;
+			children = (
+				1AE19E4F1C700E6B0033F087 /* GMHistoryEventController.h */,
+				1AE19E501C700E6B0033F087 /* GMHistoryEventController.m */,
+				1AE19E511C700E6B0033F087 /* GMHistoryEventController.xib */,
+				1AE19E611C7020E30033F087 /* GMHistoryEventDetailController.h */,
+				1AE19E621C7020E30033F087 /* GMHistoryEventDetailController.m */,
+				1AE19E631C7020E30033F087 /* GMHistoryEventDetailController.xib */,
+				1AE19E691C7043BB0033F087 /* GMHistoryViewCell.h */,
+				1AE19E6A1C7043BB0033F087 /* GMHistoryViewCell.m */,
+				1AE19E6B1C7043BB0033F087 /* GMHistoryViewCell.xib */,
+				1AE19E541C700F760033F087 /* GMHistoryEventProvider.h */,
+				1AE19E551C700F760033F087 /* GMHistoryEventProvider.m */,
+			);
+			path = HistoryEvent;
+			sourceTree = "<group>";
+		};
+		1AE19E5A1C70199E0033F087 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1AE19E5E1C701A520033F087 /* NSDate+Helper.h */,
+				1AE19E5F1C701A520033F087 /* NSDate+Helper.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		58BC6587C64960BABC82213A /* Frameworks */ = {
@@ -485,12 +545,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE19E531C700E6B0033F087 /* GMHistoryEventController.xib in Resources */,
 				1AB983691C59AC8400EE31C6 /* GMPhoneLocationViewController.xib in Resources */,
 				1AD9DEBF1C5206C600444842 /* LaunchScreen.storyboard in Resources */,
 				1AAF0E1D1C5224FD00696C5C /* GMMallViewController.xib in Resources */,
 				1AAF0E221C52251300696C5C /* GMMeViewController.xib in Resources */,
 				1AAF0E161C5224E500696C5C /* GMHomeViewController.xib in Resources */,
+				1AE19E651C7020E30033F087 /* GMHistoryEventDetailController.xib in Resources */,
 				1AB22A021C55C51B006A37BC /* GMLiveViewController.xib in Resources */,
+				1AE19E6D1C7043BB0033F087 /* GMHistoryViewCell.xib in Resources */,
 				1AD9DEBC1C5206C600444842 /* Assets.xcassets in Resources */,
 				1AB229FD1C55B03F006A37BC /* menu.json in Resources */,
 				1AB9835D1C59A62800EE31C6 /* LifePageList.json in Resources */,
@@ -555,23 +618,30 @@
 				1AD9DEE91C5207CF00444842 /* AppDelegate.m in Sources */,
 				1AD9DEF21C52092300444842 /* GMTabBarViewController.m in Sources */,
 				1AB983751C5A047700EE31C6 /* GMPhoneLocationProvider.m in Sources */,
+				1AE19E591C7012270033F087 /* GMHistoryEvent.m in Sources */,
 				1AAF0E151C5224E500696C5C /* GMHomeViewController.m in Sources */,
 				1AB229FB1C52304E006A37BC /* GMViewControllerShared.m in Sources */,
 				1AB983721C5A044E00EE31C6 /* GMDataProvider.m in Sources */,
 				1AD9DEB11C5206C600444842 /* main.m in Sources */,
+				1AE19E681C702ADA0033F087 /* GMHistoryEventDetail.m in Sources */,
 				1AAF0E1C1C5224FD00696C5C /* GMMallViewController.m in Sources */,
 				1AB9836F1C5A029B00EE31C6 /* GMPhoneInfo.m in Sources */,
 				1AD9DEEF1C52084400444842 /* GMViewShared.m in Sources */,
 				1AAF0E211C52251300696C5C /* GMMeViewController.m in Sources */,
+				1AE19E601C701A520033F087 /* NSDate+Helper.m in Sources */,
 				1A8A333F1C520C5400BDD2E3 /* GMConfigurationManager.m in Sources */,
+				1AE19E521C700E6B0033F087 /* GMHistoryEventController.m in Sources */,
 				1AD9DEF51C52094A00444842 /* GMNavigationController.m in Sources */,
+				1AE19E561C700F760033F087 /* GMHistoryEventProvider.m in Sources */,
 				1AB983681C59AC8400EE31C6 /* GMPhoneLocationViewController.m in Sources */,
 				1AB983601C59A6CD00EE31C6 /* GMSubViewItem.m in Sources */,
+				1AE19E641C7020E30033F087 /* GMHistoryEventDetailController.m in Sources */,
 				1AB22A011C55C51B006A37BC /* GMLiveViewController.m in Sources */,
 				1AB9838A1C5AFCDB00EE31C6 /* GMIndicatorView.m in Sources */,
 				1AB9836C1C59B6BE00EE31C6 /* GMAccessManager.m in Sources */,
 				1AAF0E2A1C52287100696C5C /* GMViewControllerManager.m in Sources */,
 				1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */,
+				1AE19E6C1C7043BB0033F087 /* GMHistoryViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

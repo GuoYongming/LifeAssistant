@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"手机归属地查询";
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.searchBtn.layer.cornerRadius = 6;
     self.searchBtn.layer.masksToBounds = YES;

@@ -50,9 +50,15 @@
     return [carTest evaluateWithObject:carNo];
 }
 
+
+
 #pragma mark - appkey
 - (NSString *)appKey_PhoneLocation
 {
     return @"8516518980614de5d6af4e19fe346a72";
+}
+- (NSString *)appKey_HistoryToday
+{
+    return @"99379a074ee405b11cff5d62b021490f";
 }
 @end
