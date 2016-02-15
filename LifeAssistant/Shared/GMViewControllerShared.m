@@ -40,6 +40,23 @@
     }
 }
 
+- (void)setExtraCellLineHidden:(UITableView *)tableView
+{
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor whiteColor];
+    tableView.tableFooterView = view;
+}
+
+- (void)setExtendedCellLineToLeft:(UITableView *)tableView
+{
+    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
 -(void)requestSuccess:(GMDataProvider *)provider
 {
     

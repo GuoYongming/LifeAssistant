@@ -22,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"历史上的今天";
-    
+    [self setExtraCellLineHidden:self.mainTableView];
+    [self setExtendedCellLineToLeft:self.mainTableView];
     
     self.eventProvider = [[GMHistoryEventProvider alloc] initWithDelegate:self];
 }
@@ -81,6 +82,15 @@
     [self.navigationController pushViewController:detailController animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+}
 #pragma mark - GMDataProviderDelegate
 
 - (void)requestSuccess:(GMDataProvider *)provider

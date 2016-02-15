@@ -18,4 +18,6 @@
 
 - (void)showFullIndicator;
 - (void)hideFullIndicator;
+- (void)setExtraCellLineHidden:(UITableView *)tableView;
+- (void)setExtendedCellLineToLeft:(UITableView *)tableView;
 @end
