@@ -11,6 +11,7 @@
 #import "GMSubViewItem.h"
 #import "GMDataProvider.h"
 #import "GMIndicatorView.h"
+#import "UIView+Frame.h"
 
 @interface GMViewControllerShared : UIViewController <GMDataProviderDelegate>
 @property (nonatomic, strong) GMMenuItem *menuItem;

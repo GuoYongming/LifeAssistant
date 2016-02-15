@@ -16,3 +16,6 @@
 #define kHistoryEventRequestUrl         @"http://v.juhe.cn/todayOnhistory/queryEvent.php"
 #define kHistoryEventDetalRequestUrl    @"http://v.juhe.cn/todayOnhistory/queryDetail.php"
 #define kAllJokesDataRequestUrl         @"http://japi.juhe.cn/joke/content/text.from"
+#define kAllJokeImageDataRequestUrl     @"http://japi.juhe.cn/joke/img/text.from"
+
+

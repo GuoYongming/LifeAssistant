@@ -8,7 +8,9 @@
 
 #import "GMJokeViewController.h"
 #import "GMLatestJokeCell.h"
+#import "GMJokeImageCell.h"
 #import "GMJokeProvider.h"
+#import "GMJokeImageProvider.h"
 #import "GMJoke.h"
 #import "MJRefresh.h"
 
@@ -17,7 +19,10 @@
 @property (strong, nonatomic) UITableView *latestJokeTableView;
 @property (strong, nonatomic) UITableView *latestImageTableView;
 @property (strong, nonatomic) GMJokeProvider *jokeProvider;
-@property (assign, nonatomic) int currentPage;
+@property (strong, nonatomic) GMJokeImageProvider *jokeImageProvider;
+@property (assign, nonatomic) int currentJokePage;
+@property (assign, nonatomic) int currentJokeImagePage;
+@property (assign, nonatomic) BOOL isFistLoadJokeImage;
 @end
 
 @implementation GMJokeViewController
@@ -25,7 +30,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.jokeProvider = [[GMJokeProvider alloc] initWithDelegate:self];
-    self.currentPage = 1;
+    self.jokeImageProvider = [[GMJokeImageProvider alloc] initWithDelegate:self];
+    self.currentJokePage = 1;
+    self.currentJokeImagePage = 1;
+    self.isFistLoadJokeImage = YES;
     UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:@[@"最新笑话",@"最新趣图"]];
     segment.frame = CGRectMake(0, 0, 200, 30);
     segment.selectedSegmentIndex = 0;
@@ -50,22 +58,20 @@
     self.latestJokeTableView.rowHeight = UITableViewAutomaticDimension;
     [self.mainScrollView addSubview:self.latestJokeTableView];
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreJokeData)];
-//    [footer setTitle:@"上拉加载更多" forState:MJRefreshStateIdle];
-//    [footer setTitle:@"正在加载更多数据..." forState:MJRefreshStateRefreshing];
-//    [footer setTitle:@"全部加载完毕" forState:MJRefreshStateNoMoreData];
-//    footer.stateLabel.font = [UIFont systemFontOfSize:17];
-//    footer.stateLabel.textColor = [UIColor blueColor];
+    self.latestJokeTableView.mj_footer = footer;
     [self setExtraCellLineHidden:self.latestJokeTableView];
     [self setExtendedCellLineToLeft:self.latestJokeTableView];
-    self.latestJokeTableView.mj_footer = footer;
     
     self.latestImageTableView = [[UITableView alloc] initWithFrame:CGRectMake(self.latestJokeTableView.bounds.size.width, 0, self.mainScrollView.bounds.size.width, self.mainScrollView.bounds.size.height) style:UITableViewStylePlain];
     self.latestImageTableView.backgroundColor = [UIColor whiteColor];
+    [self.latestImageTableView registerNib:[UINib nibWithNibName:@"GMJokeImageCell" bundle:nil] forCellReuseIdentifier:@"JokeImageCell"];
     self.latestImageTableView.delegate = self;
     self.latestImageTableView.dataSource = self;
     self.latestImageTableView.estimatedRowHeight = 44.0f;
     self.latestImageTableView.rowHeight = UITableViewAutomaticDimension;
     [self.mainScrollView addSubview:self.latestImageTableView];
+    MJRefreshAutoNormalFooter *footer1 = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreJokeImageData)];
+    self.latestImageTableView.mj_footer = footer1;
     [self setExtraCellLineHidden:self.latestImageTableView];
     [self setExtendedCellLineToLeft:self.latestImageTableView];
 }
@@ -79,7 +85,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.jokeProvider fetchHistoryEventDataWithPageNumber:self.currentPage];
+    [self.jokeProvider fetchJokesDataWithPageNumber:self.currentJokePage];
     [self showFullIndicator];
 }
 
@@ -92,8 +98,13 @@
 
 - (void)loadMoreJokeData
 {
-    self.currentPage++;
-    [self.jokeProvider fetchHistoryEventDataWithPageNumber:self.currentPage];
+    self.currentJokePage++;
+    [self.jokeProvider fetchJokesDataWithPageNumber:self.currentJokePage];
+}
+- (void)loadMoreJokeImageData
+{
+    self.currentJokeImagePage++;
+    [self.jokeImageProvider fetchJokeImagesDataWithPageNumber:self.currentJokeImagePage];
 }
 
 - (void)didChangedSegmentItem:(UISegmentedControl *)seg
@@ -102,6 +113,11 @@
     if (index == 0) {
         self.mainScrollView.contentOffset = CGPointMake(0, 0);
     }else{
+        if (self.isFistLoadJokeImage) {
+            self.isFistLoadJokeImage = NO;
+            [self.jokeImageProvider fetchJokeImagesDataWithPageNumber:self.currentJokeImagePage];
+            [self showFullIndicator];
+        }
         self.mainScrollView.contentOffset = CGPointMake(self.latestJokeTableView.bounds.size.width, 0);
     }
 }
@@ -112,7 +128,7 @@
     if (tableView == self.latestJokeTableView) {
         return self.jokeProvider.jokes.count;
     }else{
-        return 0;
+        return self.jokeImageProvider.jokeImages.count;
     }
 }
 
@@ -127,11 +143,16 @@
         cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
         return cell;
     }else{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JokeImageCell"];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"JokeImageCell"];
-        }
-        cell.textLabel.text = @"numberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSectionnumberOfRowsInSection";
+        GMJokeImageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JokeImageCell"];
+        GMJoke *joke = self.jokeImageProvider.jokeImages[indexPath.row];
+        cell.titleLabel.text = joke.jokeContent;
+        cell.updateLabel.text = joke.jokeUpdateTime;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:joke.jokeImageUrl]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [cell.contentWebView loadData:imageData MIMEType:@"image/gif" textEncodingName:@"UTF-8" baseURL:nil];
+            });
+        });
         return cell;
     }
     return nil;
@@ -162,6 +183,11 @@
             [self.latestJokeTableView.mj_footer endRefreshing];
         }
         [self.latestJokeTableView reloadData];
+    }else{
+        if ([self.latestImageTableView.mj_footer isRefreshing]) {
+            [self.latestImageTableView.mj_footer endRefreshing];
+        }
+        [self.latestImageTableView reloadData];
     }
 }
 

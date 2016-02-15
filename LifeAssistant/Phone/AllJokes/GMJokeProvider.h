@@ -11,5 +11,5 @@
 @interface GMJokeProvider : GMDataProvider
 @property (nonatomic,strong) NSMutableArray *jokes;
 
-- (void)fetchHistoryEventDataWithPageNumber:(int)pageNumber;
+- (void)fetchJokesDataWithPageNumber:(int)pageNumber;
 @end

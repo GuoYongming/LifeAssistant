@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A03ADEE1C719ECA00094C00 /* GMJokeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A03ADEC1C719ECA00094C00 /* GMJokeImageCell.m */; };
+		1A03ADF21C71A4B300094C00 /* GMJokeImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A03ADF11C71A4B300094C00 /* GMJokeImageProvider.m */; };
+		1A03ADF51C71B4D800094C00 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A03ADF41C71B4D800094C00 /* UIView+Frame.m */; };
+		1A03ADF71C71BCFB00094C00 /* GMJokeImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A03ADF61C71BCFB00094C00 /* GMJokeImageCell.xib */; };
 		1A8A333F1C520C5400BDD2E3 /* GMConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A333E1C520C5400BDD2E3 /* GMConfigurationManager.m */; };
 		1AAF0E151C5224E500696C5C /* GMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF0E0D1C5224E500696C5C /* GMHomeViewController.m */; };
 		1AAF0E161C5224E500696C5C /* GMHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF0E0E1C5224E500696C5C /* GMHomeViewController.xib */; };
@@ -75,6 +79,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A03ADEB1C719ECA00094C00 /* GMJokeImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJokeImageCell.h; sourceTree = "<group>"; };
+		1A03ADEC1C719ECA00094C00 /* GMJokeImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJokeImageCell.m; sourceTree = "<group>"; };
+		1A03ADF01C71A4B300094C00 /* GMJokeImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJokeImageProvider.h; sourceTree = "<group>"; };
+		1A03ADF11C71A4B300094C00 /* GMJokeImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJokeImageProvider.m; sourceTree = "<group>"; };
+		1A03ADF31C71B4D800094C00 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		1A03ADF41C71B4D800094C00 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		1A03ADF61C71BCFB00094C00 /* GMJokeImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMJokeImageCell.xib; sourceTree = "<group>"; };
 		1A8A333D1C520C5400BDD2E3 /* GMConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMConfigurationManager.h; sourceTree = "<group>"; };
 		1A8A333E1C520C5400BDD2E3 /* GMConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMConfigurationManager.m; sourceTree = "<group>"; };
 		1AAF0E051C5222E500696C5C /* LifeAssistan-Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeAssistan-Definition.h"; sourceTree = "<group>"; };
@@ -433,6 +444,8 @@
 			children = (
 				1AE19E5E1C701A520033F087 /* NSDate+Helper.h */,
 				1AE19E5F1C701A520033F087 /* NSDate+Helper.m */,
+				1A03ADF31C71B4D800094C00 /* UIView+Frame.h */,
+				1A03ADF41C71B4D800094C00 /* UIView+Frame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -445,8 +458,13 @@
 				1AE19E741C7078C70033F087 /* GMLatestJokeCell.h */,
 				1AE19E751C7078C70033F087 /* GMLatestJokeCell.m */,
 				1AE19E761C7078C70033F087 /* GMLatestJokeCell.xib */,
+				1A03ADEB1C719ECA00094C00 /* GMJokeImageCell.h */,
+				1A03ADEC1C719ECA00094C00 /* GMJokeImageCell.m */,
+				1A03ADF61C71BCFB00094C00 /* GMJokeImageCell.xib */,
 				1AE19E7C1C7176CE0033F087 /* GMJokeProvider.h */,
 				1AE19E7D1C7176CE0033F087 /* GMJokeProvider.m */,
+				1A03ADF01C71A4B300094C00 /* GMJokeImageProvider.h */,
+				1A03ADF11C71A4B300094C00 /* GMJokeImageProvider.m */,
 			);
 			path = AllJokes;
 			sourceTree = "<group>";
@@ -582,6 +600,7 @@
 				1AAF0E1D1C5224FD00696C5C /* GMMallViewController.xib in Resources */,
 				1AAF0E221C52251300696C5C /* GMMeViewController.xib in Resources */,
 				1AAF0E161C5224E500696C5C /* GMHomeViewController.xib in Resources */,
+				1A03ADF71C71BCFB00094C00 /* GMJokeImageCell.xib in Resources */,
 				1AE19E651C7020E30033F087 /* GMHistoryEventDetailController.xib in Resources */,
 				1AB22A021C55C51B006A37BC /* GMLiveViewController.xib in Resources */,
 				1AE19E6D1C7043BB0033F087 /* GMHistoryViewCell.xib in Resources */,
@@ -654,11 +673,14 @@
 				1AB983751C5A047700EE31C6 /* GMPhoneLocationProvider.m in Sources */,
 				1AE19E591C7012270033F087 /* GMHistoryEvent.m in Sources */,
 				1AAF0E151C5224E500696C5C /* GMHomeViewController.m in Sources */,
+				1A03ADF21C71A4B300094C00 /* GMJokeImageProvider.m in Sources */,
 				1AB229FB1C52304E006A37BC /* GMViewControllerShared.m in Sources */,
 				1AB983721C5A044E00EE31C6 /* GMDataProvider.m in Sources */,
 				1AD9DEB11C5206C600444842 /* main.m in Sources */,
 				1AE19E681C702ADA0033F087 /* GMHistoryEventDetail.m in Sources */,
 				1AE19E771C7078C70033F087 /* GMLatestJokeCell.m in Sources */,
+				1A03ADEE1C719ECA00094C00 /* GMJokeImageCell.m in Sources */,
+				1A03ADF51C71B4D800094C00 /* UIView+Frame.m in Sources */,
 				1AAF0E1C1C5224FD00696C5C /* GMMallViewController.m in Sources */,
 				1AB9836F1C5A029B00EE31C6 /* GMPhoneInfo.m in Sources */,
 				1AD9DEEF1C52084400444842 /* GMViewShared.m in Sources */,
