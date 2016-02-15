@@ -15,9 +15,9 @@
 #import "MJRefresh.h"
 
 @interface GMJokeViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (strong, nonatomic) UIScrollView *mainScrollView;
-@property (strong, nonatomic) UITableView *latestJokeTableView;
-@property (strong, nonatomic) UITableView *latestImageTableView;
+@property (nonatomic, strong) UISegmentedControl *segment;
+@property (weak, nonatomic) IBOutlet UITableView *latestJokeTableView;
+@property (weak, nonatomic) IBOutlet UITableView *latestImageTableView;
 @property (strong, nonatomic) GMJokeProvider *jokeProvider;
 @property (strong, nonatomic) GMJokeImageProvider *jokeImageProvider;
 @property (assign, nonatomic) int currentJokePage;
@@ -34,57 +34,51 @@
     self.currentJokePage = 1;
     self.currentJokeImagePage = 1;
     self.isFistLoadJokeImage = YES;
-    UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:@[@"最新笑话",@"最新趣图"]];
-    segment.frame = CGRectMake(0, 0, 200, 30);
-    segment.selectedSegmentIndex = 0;
-    segment.tintColor = [UIColor blackColor];
-    [segment addTarget:self action:@selector(didChangedSegmentItem:) forControlEvents:UIControlEventValueChanged];
-    self.navigationItem.titleView = segment;
+    self.segment = [[UISegmentedControl alloc] initWithItems:@[@"最新笑话",@"最新趣图"]];
+    self.segment.frame = CGRectMake(0, 0, 200, 30);
+    self.segment.selectedSegmentIndex = 0;
+    self.segment.tintColor = [UIColor blackColor];
+    [self.segment addTarget:self action:@selector(didChangedSegmentItem:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = self.segment;
 }
 
 - (void)initUI
 {
-    self.mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - self.navigationController.navigationBar.bounds.size.height - 20 - self.tabBarController.tabBar.bounds.size.height)];
-    self.mainScrollView.scrollEnabled = NO;
-    self.mainScrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 0);
-    self.mainScrollView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.mainScrollView];
-    self.latestJokeTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.mainScrollView.bounds.size.width, self.mainScrollView.bounds.size.height) style:UITableViewStylePlain];
-    self.latestJokeTableView.backgroundColor = [UIColor whiteColor];
     [self.latestJokeTableView registerNib:[UINib nibWithNibName:@"GMLatestJokeCell" bundle:nil] forCellReuseIdentifier:@"JokeCell"];
-    self.latestJokeTableView.delegate = self;
-    self.latestJokeTableView.dataSource = self;
     self.latestJokeTableView.estimatedRowHeight = 44.0f;
     self.latestJokeTableView.rowHeight = UITableViewAutomaticDimension;
-    [self.mainScrollView addSubview:self.latestJokeTableView];
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreJokeData)];
     self.latestJokeTableView.mj_footer = footer;
     [self setExtraCellLineHidden:self.latestJokeTableView];
     [self setExtendedCellLineToLeft:self.latestJokeTableView];
     
-    self.latestImageTableView = [[UITableView alloc] initWithFrame:CGRectMake(self.latestJokeTableView.bounds.size.width, 0, self.mainScrollView.bounds.size.width, self.mainScrollView.bounds.size.height) style:UITableViewStylePlain];
-    self.latestImageTableView.backgroundColor = [UIColor whiteColor];
     [self.latestImageTableView registerNib:[UINib nibWithNibName:@"GMJokeImageCell" bundle:nil] forCellReuseIdentifier:@"JokeImageCell"];
-    self.latestImageTableView.delegate = self;
-    self.latestImageTableView.dataSource = self;
     self.latestImageTableView.estimatedRowHeight = 44.0f;
     self.latestImageTableView.rowHeight = UITableViewAutomaticDimension;
-    [self.mainScrollView addSubview:self.latestImageTableView];
     MJRefreshAutoNormalFooter *footer1 = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreJokeImageData)];
     self.latestImageTableView.mj_footer = footer1;
     [self setExtraCellLineHidden:self.latestImageTableView];
     [self setExtendedCellLineToLeft:self.latestImageTableView];
+    
+    if (self.segment.selectedSegmentIndex == 0) {
+        self.latestJokeTableView.hidden = NO;
+        self.latestImageTableView.hidden = YES;
+    }else{
+        self.latestJokeTableView.hidden = YES;
+        self.latestImageTableView.hidden = NO;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self initUI];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self initUI];
     [self.jokeProvider fetchJokesDataWithPageNumber:self.currentJokePage];
     [self showFullIndicator];
 }
@@ -109,16 +103,17 @@
 
 - (void)didChangedSegmentItem:(UISegmentedControl *)seg
 {
-    NSInteger index = seg.selectedSegmentIndex;
-    if (index == 0) {
-        self.mainScrollView.contentOffset = CGPointMake(0, 0);
+    if (seg.selectedSegmentIndex == 0) {
+        self.latestJokeTableView.hidden = NO;
+        self.latestImageTableView.hidden = YES;
     }else{
         if (self.isFistLoadJokeImage) {
             self.isFistLoadJokeImage = NO;
             [self.jokeImageProvider fetchJokeImagesDataWithPageNumber:self.currentJokeImagePage];
             [self showFullIndicator];
         }
-        self.mainScrollView.contentOffset = CGPointMake(self.latestJokeTableView.bounds.size.width, 0);
+        self.latestJokeTableView.hidden = YES;
+        self.latestImageTableView.hidden = NO;
     }
 }
 
@@ -144,6 +139,7 @@
         return cell;
     }else{
         GMJokeImageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JokeImageCell"];
+        cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
         GMJoke *joke = self.jokeImageProvider.jokeImages[indexPath.row];
         cell.titleLabel.text = joke.jokeContent;
         cell.updateLabel.text = joke.jokeUpdateTime;

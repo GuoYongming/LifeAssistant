@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="247" id="KGk-i7-Jjw" customClass="GMJokeImageCell">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="247"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="246"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmI-uh-LeE">
+                        <rect key="frame" x="23" y="8" width="282" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <webView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BT0-tj-QDv">
+                        <rect key="frame" x="18" y="34" width="276" height="155"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="BT0-tj-QDv" secondAttribute="height" multiplier="16:9" id="kLW-Bp-GBm"/>
+                        </constraints>
+                    </webView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVC-Qb-eBO">
+                        <rect key="frame" x="23" y="205" width="265" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="gbA-eL-ybg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BT0-tj-QDv" firstAttribute="top" secondItem="PmI-uh-LeE" secondAttribute="bottom" id="13D-ei-wVu"/>
+                    <constraint firstItem="BT0-tj-QDv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="2PQ-zB-Kt0"/>
+                    <constraint firstItem="PmI-uh-LeE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="4IN-2R-Fea"/>
+                    <constraint firstItem="SVC-Qb-eBO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="7Qe-I2-a4q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="BT0-tj-QDv" secondAttribute="trailing" constant="10" id="GSt-0u-mfu"/>
+                    <constraint firstItem="SVC-Qb-eBO" firstAttribute="top" secondItem="BT0-tj-QDv" secondAttribute="bottom" id="ONr-uj-bJt"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PmI-uh-LeE" secondAttribute="trailing" constant="15" id="VTB-un-uWQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SVC-Qb-eBO" secondAttribute="bottom" constant="5" id="WAG-fh-ie0"/>
+                    <constraint firstItem="PmI-uh-LeE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Z0g-0s-0OK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SVC-Qb-eBO" secondAttribute="trailing" constant="15" id="pqc-dh-swj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentWebView" destination="BT0-tj-QDv" id="2ge-ZP-nnL"/>
+                <outlet property="titleLabel" destination="PmI-uh-LeE" id="pCJ-Gc-4y3"/>
+                <outlet property="updateLabel" destination="SVC-Qb-eBO" id="k1P-ge-RxA"/>
+            </connections>
+            <point key="canvasLocation" x="233" y="257.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -21,7 +21,7 @@
 
 - (void)fetchJokeImagesDataWithPageNumber:(int)pageNumber
 {
-    NSDictionary *paramas = @{@"key":[GMAccessManager sharedManager].appKey_AllJokes, @"page":[NSNumber numberWithInt:pageNumber], @"pagesize":[NSNumber numberWithInt:10]};
+    NSDictionary *paramas = @{@"key":[GMAccessManager sharedManager].appKey_AllJokes, @"page":[NSNumber numberWithInt:pageNumber], @"pagesize":[NSNumber numberWithInt:5]};
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
