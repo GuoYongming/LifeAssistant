@@ -11,6 +11,7 @@
 @interface GMAccessManager : NSObject
 @property (nonatomic, copy) NSString *appKey_PhoneLocation;
 @property (nonatomic, copy) NSString *appKey_HistoryToday;
+@property (nonatomic, copy) NSString *appKey_AllJokes;
 
 + (GMAccessManager *)sharedManager;
 

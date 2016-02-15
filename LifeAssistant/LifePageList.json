@@ -16,6 +16,14 @@
             "params":{},
             "displayImage":"",
             "type":"menuitem"
+            },
+            {
+            "id":"allJokes",
+            "title":"笑话大全",
+            "uiView":"AllJokes",
+            "params":{},
+            "displayImage":"",
+            "type":"menuitem"
             }
             ],
     "description":"The menu items under More",

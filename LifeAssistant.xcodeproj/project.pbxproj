@@ -48,6 +48,11 @@
 		1AE19E681C702ADA0033F087 /* GMHistoryEventDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E671C702ADA0033F087 /* GMHistoryEventDetail.m */; };
 		1AE19E6C1C7043BB0033F087 /* GMHistoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E6A1C7043BB0033F087 /* GMHistoryViewCell.m */; };
 		1AE19E6D1C7043BB0033F087 /* GMHistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE19E6B1C7043BB0033F087 /* GMHistoryViewCell.xib */; };
+		1AE19E721C7057A90033F087 /* GMJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E701C7057A90033F087 /* GMJokeViewController.m */; };
+		1AE19E771C7078C70033F087 /* GMLatestJokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E751C7078C70033F087 /* GMLatestJokeCell.m */; };
+		1AE19E781C7078C70033F087 /* GMLatestJokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE19E761C7078C70033F087 /* GMLatestJokeCell.xib */; };
+		1AE19E7B1C7175A90033F087 /* GMJoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E7A1C7175A90033F087 /* GMJoke.m */; };
+		1AE19E7E1C7176CE0033F087 /* GMJokeProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E7D1C7176CE0033F087 /* GMJokeProvider.m */; };
 		1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */; };
 		EA28A07166B9E87DD6F5DEC0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51215ED8BB6AF7D39F1B710B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -143,6 +148,15 @@
 		1AE19E691C7043BB0033F087 /* GMHistoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryViewCell.h; sourceTree = "<group>"; };
 		1AE19E6A1C7043BB0033F087 /* GMHistoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryViewCell.m; sourceTree = "<group>"; };
 		1AE19E6B1C7043BB0033F087 /* GMHistoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMHistoryViewCell.xib; sourceTree = "<group>"; };
+		1AE19E6F1C7057A90033F087 /* GMJokeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJokeViewController.h; sourceTree = "<group>"; };
+		1AE19E701C7057A90033F087 /* GMJokeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJokeViewController.m; sourceTree = "<group>"; };
+		1AE19E741C7078C70033F087 /* GMLatestJokeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLatestJokeCell.h; sourceTree = "<group>"; };
+		1AE19E751C7078C70033F087 /* GMLatestJokeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLatestJokeCell.m; sourceTree = "<group>"; };
+		1AE19E761C7078C70033F087 /* GMLatestJokeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMLatestJokeCell.xib; sourceTree = "<group>"; };
+		1AE19E791C7175A90033F087 /* GMJoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJoke.h; sourceTree = "<group>"; };
+		1AE19E7A1C7175A90033F087 /* GMJoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJoke.m; sourceTree = "<group>"; };
+		1AE19E7C1C7176CE0033F087 /* GMJokeProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJokeProvider.h; sourceTree = "<group>"; };
+		1AE19E7D1C7176CE0033F087 /* GMJokeProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJokeProvider.m; sourceTree = "<group>"; };
 		1AE6EE391C52162C008CA2B9 /* GMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMenuItem.h; sourceTree = "<group>"; };
 		1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMenuItem.m; sourceTree = "<group>"; };
 		51215ED8BB6AF7D39F1B710B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,6 +366,8 @@
 				1AE19E581C7012270033F087 /* GMHistoryEvent.m */,
 				1AE19E661C702ADA0033F087 /* GMHistoryEventDetail.h */,
 				1AE19E671C702ADA0033F087 /* GMHistoryEventDetail.m */,
+				1AE19E791C7175A90033F087 /* GMJoke.h */,
+				1AE19E7A1C7175A90033F087 /* GMJoke.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,6 +382,7 @@
 		1AD9DEE71C5207CF00444842 /* Phone */ = {
 			isa = PBXGroup;
 			children = (
+				1AE19E6E1C70572C0033F087 /* AllJokes */,
 				1AE19E4E1C700E3A0033F087 /* HistoryEvent */,
 				1AB983611C59AAE800EE31C6 /* PhoneLocation */,
 				1AAF0E0B1C5224E500696C5C /* Home */,
@@ -418,6 +435,20 @@
 				1AE19E5F1C701A520033F087 /* NSDate+Helper.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		1AE19E6E1C70572C0033F087 /* AllJokes */ = {
+			isa = PBXGroup;
+			children = (
+				1AE19E6F1C7057A90033F087 /* GMJokeViewController.h */,
+				1AE19E701C7057A90033F087 /* GMJokeViewController.m */,
+				1AE19E741C7078C70033F087 /* GMLatestJokeCell.h */,
+				1AE19E751C7078C70033F087 /* GMLatestJokeCell.m */,
+				1AE19E761C7078C70033F087 /* GMLatestJokeCell.xib */,
+				1AE19E7C1C7176CE0033F087 /* GMJokeProvider.h */,
+				1AE19E7D1C7176CE0033F087 /* GMJokeProvider.m */,
+			);
+			path = AllJokes;
 			sourceTree = "<group>";
 		};
 		58BC6587C64960BABC82213A /* Frameworks */ = {
@@ -556,6 +587,7 @@
 				1AE19E6D1C7043BB0033F087 /* GMHistoryViewCell.xib in Resources */,
 				1AD9DEBC1C5206C600444842 /* Assets.xcassets in Resources */,
 				1AB229FD1C55B03F006A37BC /* menu.json in Resources */,
+				1AE19E781C7078C70033F087 /* GMLatestJokeCell.xib in Resources */,
 				1AB9835D1C59A62800EE31C6 /* LifePageList.json in Resources */,
 				1AD9DEBA1C5206C600444842 /* Main.storyboard in Resources */,
 			);
@@ -616,6 +648,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD9DEE91C5207CF00444842 /* AppDelegate.m in Sources */,
+				1AE19E721C7057A90033F087 /* GMJokeViewController.m in Sources */,
+				1AE19E7E1C7176CE0033F087 /* GMJokeProvider.m in Sources */,
 				1AD9DEF21C52092300444842 /* GMTabBarViewController.m in Sources */,
 				1AB983751C5A047700EE31C6 /* GMPhoneLocationProvider.m in Sources */,
 				1AE19E591C7012270033F087 /* GMHistoryEvent.m in Sources */,
@@ -624,6 +658,7 @@
 				1AB983721C5A044E00EE31C6 /* GMDataProvider.m in Sources */,
 				1AD9DEB11C5206C600444842 /* main.m in Sources */,
 				1AE19E681C702ADA0033F087 /* GMHistoryEventDetail.m in Sources */,
+				1AE19E771C7078C70033F087 /* GMLatestJokeCell.m in Sources */,
 				1AAF0E1C1C5224FD00696C5C /* GMMallViewController.m in Sources */,
 				1AB9836F1C5A029B00EE31C6 /* GMPhoneInfo.m in Sources */,
 				1AD9DEEF1C52084400444842 /* GMViewShared.m in Sources */,
@@ -639,6 +674,7 @@
 				1AB22A011C55C51B006A37BC /* GMLiveViewController.m in Sources */,
 				1AB9838A1C5AFCDB00EE31C6 /* GMIndicatorView.m in Sources */,
 				1AB9836C1C59B6BE00EE31C6 /* GMAccessManager.m in Sources */,
+				1AE19E7B1C7175A90033F087 /* GMJoke.m in Sources */,
 				1AAF0E2A1C52287100696C5C /* GMViewControllerManager.m in Sources */,
 				1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */,
 				1AE19E6C1C7043BB0033F087 /* GMHistoryViewCell.m in Sources */,

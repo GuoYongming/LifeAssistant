@@ -61,4 +61,8 @@
 {
     return @"99379a074ee405b11cff5d62b021490f";
 }
+- (NSString *)appKey_AllJokes
+{
+    return @"ffc6bb82b9e8f52cdf0d523b57cee792";
+}
 @end

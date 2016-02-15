@@ -73,6 +73,9 @@
         else if ([subviewItem.uiView isEqualToString:@"HistoryToday"]){
             classString = @"GMHistoryEventController";
         }
+        else if ([subviewItem.uiView isEqualToString:@"AllJokes"]){
+            classString = @"GMJokeViewController";
+        }
         
         Class class = NSClassFromString(classString);
         
