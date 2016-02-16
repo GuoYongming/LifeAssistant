@@ -1,31 +1,287 @@
 {
-    "title":"LiftPage",
-    "item":[
-            {
-            "id":"allJokes",
-            "title":"笑话大全",
-            "uiView":"AllJokes",
-            "params":{},
-            "displayImage":"",
-            "type":"menuitem"
-            },
-            {
-            "id":"historyToday",
-            "title":"历史上的今天",
-            "uiView":"HistoryToday",
-            "params":{},
-            "displayImage":"",
-            "type":"menuitem"
-            },
-            {
-            "id":"phoneLocation",
-            "title":"手机归属地查询",
-            "uiView":"PhoneLocation",
-            "params":{},
-            "displayImage":"",
-            "type":"menuitem"
-            }
-            ],
-    "description":"The menu items under More",
-    "type":"menu"
+    "title": "LiftPage",
+    "item": [
+             {
+             "id": "liveCommon",
+             "title": "生活常用",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "allJokes",
+                       "title": "笑话大全",
+                       "uiView": "AllJokes",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "phoneLocation",
+                       "title": "手机归属地查询",
+                       "uiView": "PhoneLocation",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "cardQueryId",
+                       "title": "身份证查询",
+                       "uiView": "CardIdQueryView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "ipAddressQueryId",
+                       "title": "IP地址查询",
+                       "uiView": "IpAddressQueryView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "wechatSelectId",
+                       "title": "微信精选",
+                       "uiView": "WechatSelectView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "nbaMatchId",
+                       "title": "NBA赛事",
+                       "uiView": "NBAMatchView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "zipcodeQueryId",
+                       "title": "邮编查询",
+                       "uiView": "ZipcodeQueryView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "footballMatchId",
+                       "title": "足球联赛",
+                       "uiView": "FootballMatchView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "tvprogramId",
+                       "title": "电视节目时间表",
+                       "uiView": "TVProgramView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "weatherReportId",
+                       "title": "天气预报",
+                       "uiView": "WeatherReportView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             },
+             {
+             "id": "purchaseId",
+             "title": "缴费充值",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "phonePurchaseId",
+                       "title": "手机话费充值",
+                       "uiView": "PhonePurchase",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "phoneFlowId",
+                       "title": "手机流量充值",
+                       "uiView": "PhoneFlowPurchase",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             },
+             {
+             "id": "vehicleServiceId",
+             "title": "车辆服务",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "vehicleServiceId",
+                       "title": "驾照题库",
+                       "uiView": "VehicleService",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             },
+             {
+             "id": "medicalHealthId",
+             "title": "医药健康",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "hospitalInfoId",
+                       "title": "医院信息",
+                       "uiView": "HospitalInfo",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "pharmacyInfoId",
+                       "title": "药店大全",
+                       "uiView": "PharmacyInfo",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "drugInfoId",
+                       "title": "药品大全",
+                       "uiView": "DrugInfo",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             },
+             {
+             "id": "entertainmentId",
+             "title": "影视娱乐",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "filmRetrievalId",
+                       "title": "影视影讯检索",
+                       "uiView": "FilmRetrievalView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "horoscopeId",
+                       "title": "星座运势",
+                       "uiView": "HoroscopeView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "zhougongDreamId",
+                       "title": "周公解梦",
+                       "uiView": "ZhougongDreamView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "oldCalendarId",
+                       "title": "老黄历",
+                       "uiView": "OldCalendarView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             },
+             {
+             "id": "fullnetworkdataId",
+             "title": "全网数据",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "driverlicenseId",
+                       "title": "驾照题库",
+                       "uiView": "DriverlicenseView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             },
+             {
+             "id": "knowledgeId",
+             "title": "问答知识",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "robotId",
+                       "title": "问答机器人",
+                       "uiView": "RobotView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "translationId",
+                       "title": "有道翻译",
+                       "uiView": "TranslationView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "idiomsDictionaryId",
+                       "title": "成语词典",
+                       "uiView": "IdiomsDictionaryView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             },
+             {
+             "id": "otherDataId",
+             "title": "其他数据",
+             "displayImage": "",
+             "type": "sectionMenu",
+             "items": [
+                       {
+                       "id": "historyToday",
+                       "title": "历史上的今天",
+                       "uiView": "HistoryToday",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "WIFIId",
+                       "title": "全国WIFI",
+                       "uiView": "WifiView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       },
+                       {
+                       "id": "fontExchangeId",
+                       "title": "简/繁/火星字体转换",
+                       "uiView": "FontExchangeView",
+                       "params": {},
+                       "displayImage": "",
+                       "type": "menuitem"
+                       }
+                       ]
+             }
+             ],
+    "description": "The menu items under More",
+    "type": "menu"
 }
