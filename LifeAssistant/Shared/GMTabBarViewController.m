@@ -27,8 +27,8 @@
     for (GMMenuItem *menuItem in menus) {
         GMViewControllerShared *childVC = [[GMViewControllerManager sharedManager] createMenuViewControllersWithMenuItem:menuItem];
         childVC.title = menuItem.title;
-//        childVC.tabBarItem.image = [UIImage imageNamed:menuItem.defaultImage];
-//        childVC.tabBarItem.selectedImage = [UIImage imageNamed:menuItem.selectedImage];
+        childVC.tabBarItem.image = [UIImage imageNamed:menuItem.defaultImage];
+        childVC.tabBarItem.selectedImage = [UIImage imageNamed:menuItem.selectedImage];
         GMNavigationController *navi = [[GMNavigationController alloc] initWithRootViewController:childVC];
         [self addChildViewController:navi];
     }
