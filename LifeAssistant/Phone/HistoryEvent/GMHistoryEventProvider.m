@@ -85,6 +85,10 @@
 
 - (void)convertEventDetailResponseDataToModel:(NSDictionary *)dictionary
 {
+    if ([[dictionary objectForKey:@"error_code"] intValue] != 0) {
+        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"暂无详细数据" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil] show];
+        return;
+    }
     NSArray *eventArray = [dictionary objectForKey:@"result"];
     if (eventArray) {
         NSDictionary *eventDic = [eventArray firstObject];
