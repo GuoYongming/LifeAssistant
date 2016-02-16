@@ -9,6 +9,7 @@
 #import "GMConfigurationManager.h"
 #import "GMMenuItem.h"
 #import "GMSubViewItem.h"
+#import "GMSectionItem.h"
 
 @implementation GMConfigurationManager
 
@@ -69,15 +70,26 @@
     NSMutableArray *items = [NSMutableArray array];
     if (dictionary) {
         NSArray *infoArray = [dictionary objectForKey:@"item"];
-        for (NSDictionary *itemDictionaty in infoArray) {
-            GMSubViewItem *item = [[GMSubViewItem alloc] init];
-            item.subviewId = [itemDictionaty objectForKey:@"id"];
-            item.title = [itemDictionaty objectForKey:@"title"];
-            item.uiView = [itemDictionaty objectForKey:@"uiView"];
-            item.displayImage = [itemDictionaty objectForKey:@"displayImage"];
-            item.params = [itemDictionaty objectForKey:@"params"];
-            item.type = [itemDictionaty objectForKey:@"type"];
-            [items addObject:item];
+        for (NSDictionary *sectionDictionaty in infoArray) {
+            GMSectionItem *sectionItem = [[GMSectionItem alloc] init];
+            sectionItem.sectionId = [sectionDictionaty objectForKey:@"id"];
+            sectionItem.title = [sectionDictionaty objectForKey:@"title"];
+            sectionItem.displayImage = [sectionDictionaty objectForKey:@"displayImage"];
+            sectionItem.type = [sectionDictionaty objectForKey:@"type"];
+            NSArray *subviews = [sectionDictionaty objectForKey:@"items"];
+            if (subviews && subviews.count > 0) {
+                for (NSDictionary *itemDictionary in subviews) {
+                    GMSubViewItem *item = [[GMSubViewItem alloc] init];
+                    item.subviewId = [itemDictionary objectForKey:@"id"];
+                    item.title = [itemDictionary objectForKey:@"title"];
+                    item.uiView = [itemDictionary objectForKey:@"uiView"];
+                    item.displayImage = [itemDictionary objectForKey:@"displayImage"];
+                    item.params = [itemDictionary objectForKey:@"params"];
+                    item.type = [itemDictionary objectForKey:@"type"];
+                    [sectionItem.subviews addObject:item];
+                }
+            }
+            [items addObject:sectionItem];
         }
     }else{
         

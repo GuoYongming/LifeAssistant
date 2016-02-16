@@ -9,6 +9,8 @@
 #import "GMLiveViewController.h"
 #import "GMConfigurationManager.h"
 #import "GMViewControllerManager.h"
+#import "GMSectionItem.h"
+#import "GMLiveViewCell.h"
 
 @interface GMLiveViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
@@ -31,6 +33,8 @@
     [super viewDidLoad];
     [self setExtraCellLineHidden:self.mainTableView];
     [self setExtendedCellLineToLeft:self.mainTableView];
+    
+    [self.mainTableView registerNib:[UINib nibWithNibName:@"GMLiveViewCell" bundle:nil] forCellReuseIdentifier:@"LiveViewCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,35 +50,63 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.dataArray.count;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    GMSectionItem *sectionItem = self.dataArray[section];
+    return sectionItem.subviews.count;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"LifeViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-    GMSubViewItem *item = self.dataArray[indexPath.row];
-    cell.textLabel.text = item.title;
-    cell.imageView.image = [UIImage imageNamed:item.displayImage];
-    cell.textLabel.font = [UIFont systemFontOfSize:15];
-    cell.backgroundColor = [UIColor whiteColor];
+    GMLiveViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LiveViewCell"];
+
+    GMSectionItem *sectionItem = self.dataArray[indexPath.section];
+    GMSubViewItem *item = sectionItem.subviews[indexPath.row];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.displayTitleLabel.text = item.title;
+    cell.displayImageView.image = [UIImage imageNamed:item.displayImage];
+    
     return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.width, 35)];
+    customView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 200, 35)];
+    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.opaque = NO;
+    headerLabel.textColor = [UIColor darkGrayColor];
+    headerLabel.font = [UIFont boldSystemFontOfSize:14];
+    GMSectionItem *sectionItem = self.dataArray[section];
+    headerLabel.text = sectionItem.title;
+    [customView addSubview:headerLabel];
+    return customView;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GMSubViewItem *item = self.dataArray[indexPath.row];
+    GMSectionItem *sectionItem = self.dataArray[indexPath.section];
+    GMSubViewItem *item = sectionItem.subviews[indexPath.row];
     GMViewControllerShared *vc = [[GMViewControllerManager sharedManager] createSubViewControllersWithMenuItem:item];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 35;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

@@ -12,7 +12,7 @@
                        "title": "笑话大全",
                        "uiView": "AllJokes",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_allJokes",
                        "type": "menuitem"
                        },
                        {
@@ -20,7 +20,7 @@
                        "title": "手机归属地查询",
                        "uiView": "PhoneLocation",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_phoneLocation",
                        "type": "menuitem"
                        },
                        {
@@ -28,7 +28,7 @@
                        "title": "身份证查询",
                        "uiView": "CardIdQueryView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_cardQuery",
                        "type": "menuitem"
                        },
                        {
@@ -36,7 +36,7 @@
                        "title": "IP地址查询",
                        "uiView": "IpAddressQueryView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_ipAddressQuery",
                        "type": "menuitem"
                        },
                        {
@@ -44,7 +44,7 @@
                        "title": "微信精选",
                        "uiView": "WechatSelectView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_wechatSelect",
                        "type": "menuitem"
                        },
                        {
@@ -52,7 +52,7 @@
                        "title": "NBA赛事",
                        "uiView": "NBAMatchView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_nbaMatch",
                        "type": "menuitem"
                        },
                        {
@@ -60,7 +60,7 @@
                        "title": "邮编查询",
                        "uiView": "ZipcodeQueryView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_zipcodeQuery",
                        "type": "menuitem"
                        },
                        {
@@ -68,7 +68,7 @@
                        "title": "足球联赛",
                        "uiView": "FootballMatchView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_footballMatch",
                        "type": "menuitem"
                        },
                        {
@@ -76,7 +76,7 @@
                        "title": "电视节目时间表",
                        "uiView": "TVProgramView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_tvprogram",
                        "type": "menuitem"
                        },
                        {
@@ -84,7 +84,7 @@
                        "title": "天气预报",
                        "uiView": "WeatherReportView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_weatherReport",
                        "type": "menuitem"
                        }
                        ]
@@ -100,7 +100,7 @@
                        "title": "手机话费充值",
                        "uiView": "PhonePurchase",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_phonePurchase",
                        "type": "menuitem"
                        },
                        {
@@ -108,7 +108,7 @@
                        "title": "手机流量充值",
                        "uiView": "PhoneFlowPurchase",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_phoneFlow",
                        "type": "menuitem"
                        }
                        ]
@@ -124,7 +124,7 @@
                        "title": "驾照题库",
                        "uiView": "VehicleService",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_vehicleService",
                        "type": "menuitem"
                        }
                        ]
@@ -140,7 +140,7 @@
                        "title": "医院信息",
                        "uiView": "HospitalInfo",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_hospitalInfo",
                        "type": "menuitem"
                        },
                        {
@@ -148,7 +148,7 @@
                        "title": "药店大全",
                        "uiView": "PharmacyInfo",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_pharmacyInfo",
                        "type": "menuitem"
                        },
                        {
@@ -156,7 +156,7 @@
                        "title": "药品大全",
                        "uiView": "DrugInfo",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_drugInfo",
                        "type": "menuitem"
                        }
                        ]
@@ -172,7 +172,7 @@
                        "title": "影视影讯检索",
                        "uiView": "FilmRetrievalView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_filmRetrieval",
                        "type": "menuitem"
                        },
                        {
@@ -180,7 +180,7 @@
                        "title": "星座运势",
                        "uiView": "HoroscopeView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_horoscope",
                        "type": "menuitem"
                        },
                        {
@@ -188,7 +188,7 @@
                        "title": "周公解梦",
                        "uiView": "ZhougongDreamView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_zhougongDream",
                        "type": "menuitem"
                        },
                        {
@@ -196,7 +196,7 @@
                        "title": "老黄历",
                        "uiView": "OldCalendarView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_oldCalendar",
                        "type": "menuitem"
                        }
                        ]
@@ -208,11 +208,11 @@
              "type": "sectionMenu",
              "items": [
                        {
-                       "id": "driverlicenseId",
-                       "title": "驾照题库",
-                       "uiView": "DriverlicenseView",
+                       "id": "electronicBooksId",
+                       "title": "图书电商数据",
+                       "uiView": "ElectronicbooksView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_electronicBooks",
                        "type": "menuitem"
                        }
                        ]
@@ -228,7 +228,7 @@
                        "title": "问答机器人",
                        "uiView": "RobotView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_robot",
                        "type": "menuitem"
                        },
                        {
@@ -236,7 +236,7 @@
                        "title": "有道翻译",
                        "uiView": "TranslationView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_translation",
                        "type": "menuitem"
                        },
                        {
@@ -244,7 +244,7 @@
                        "title": "成语词典",
                        "uiView": "IdiomsDictionaryView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_idiomsDictionary",
                        "type": "menuitem"
                        }
                        ]
@@ -260,7 +260,7 @@
                        "title": "历史上的今天",
                        "uiView": "HistoryToday",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_historyToday",
                        "type": "menuitem"
                        },
                        {
@@ -268,7 +268,7 @@
                        "title": "全国WIFI",
                        "uiView": "WifiView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_WIFI",
                        "type": "menuitem"
                        },
                        {
@@ -276,7 +276,7 @@
                        "title": "简/繁/火星字体转换",
                        "uiView": "FontExchangeView",
                        "params": {},
-                       "displayImage": "",
+                       "displayImage": "subview_fontExchange",
                        "type": "menuitem"
                        }
                        ]

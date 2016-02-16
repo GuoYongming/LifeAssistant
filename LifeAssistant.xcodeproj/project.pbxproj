@@ -43,6 +43,9 @@
 		1AD9DEEF1C52084400444842 /* GMViewShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEEE1C52084400444842 /* GMViewShared.m */; };
 		1AD9DEF21C52092300444842 /* GMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEF11C52092300444842 /* GMTabBarViewController.m */; };
 		1AD9DEF51C52094A00444842 /* GMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9DEF41C52094A00444842 /* GMNavigationController.m */; };
+		1ADE802E1C72E9CA0016E3B2 /* GMSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE802D1C72E9CA0016E3B2 /* GMSectionItem.m */; };
+		1ADE80351C72F4C40016E3B2 /* GMLiveViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE80331C72F4C40016E3B2 /* GMLiveViewCell.m */; };
+		1ADE80361C72F4C40016E3B2 /* GMLiveViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE80341C72F4C40016E3B2 /* GMLiveViewCell.xib */; };
 		1AE19E521C700E6B0033F087 /* GMHistoryEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E501C700E6B0033F087 /* GMHistoryEventController.m */; };
 		1AE19E531C700E6B0033F087 /* GMHistoryEventController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE19E511C700E6B0033F087 /* GMHistoryEventController.xib */; };
 		1AE19E561C700F760033F087 /* GMHistoryEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E551C700F760033F087 /* GMHistoryEventProvider.m */; };
@@ -144,6 +147,11 @@
 		1AD9DEF11C52092300444842 /* GMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTabBarViewController.m; sourceTree = "<group>"; };
 		1AD9DEF31C52094A00444842 /* GMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNavigationController.h; sourceTree = "<group>"; };
 		1AD9DEF41C52094A00444842 /* GMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNavigationController.m; sourceTree = "<group>"; };
+		1ADE802C1C72E9CA0016E3B2 /* GMSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSectionItem.h; sourceTree = "<group>"; };
+		1ADE802D1C72E9CA0016E3B2 /* GMSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSectionItem.m; sourceTree = "<group>"; };
+		1ADE80321C72F4C40016E3B2 /* GMLiveViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLiveViewCell.h; sourceTree = "<group>"; };
+		1ADE80331C72F4C40016E3B2 /* GMLiveViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLiveViewCell.m; sourceTree = "<group>"; };
+		1ADE80341C72F4C40016E3B2 /* GMLiveViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMLiveViewCell.xib; sourceTree = "<group>"; };
 		1AE19E4F1C700E6B0033F087 /* GMHistoryEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryEventController.h; sourceTree = "<group>"; };
 		1AE19E501C700E6B0033F087 /* GMHistoryEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryEventController.m; sourceTree = "<group>"; };
 		1AE19E511C700E6B0033F087 /* GMHistoryEventController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMHistoryEventController.xib; sourceTree = "<group>"; };
@@ -253,6 +261,9 @@
 				1AB229FE1C55C51B006A37BC /* GMLiveViewController.h */,
 				1AB229FF1C55C51B006A37BC /* GMLiveViewController.m */,
 				1AB22A001C55C51B006A37BC /* GMLiveViewController.xib */,
+				1ADE80321C72F4C40016E3B2 /* GMLiveViewCell.h */,
+				1ADE80331C72F4C40016E3B2 /* GMLiveViewCell.m */,
+				1ADE80341C72F4C40016E3B2 /* GMLiveViewCell.xib */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -373,6 +384,8 @@
 				1AE6EE3A1C52162C008CA2B9 /* GMMenuItem.m */,
 				1AB9835E1C59A6CD00EE31C6 /* GMSubViewItem.h */,
 				1AB9835F1C59A6CD00EE31C6 /* GMSubViewItem.m */,
+				1ADE802C1C72E9CA0016E3B2 /* GMSectionItem.h */,
+				1ADE802D1C72E9CA0016E3B2 /* GMSectionItem.m */,
 				1AB9836D1C5A029B00EE31C6 /* GMPhoneInfo.h */,
 				1AB9836E1C5A029B00EE31C6 /* GMPhoneInfo.m */,
 				1AE19E571C7012270033F087 /* GMHistoryEvent.h */,
@@ -611,6 +624,7 @@
 				1AD9DEBC1C5206C600444842 /* Assets.xcassets in Resources */,
 				1AB229FD1C55B03F006A37BC /* menu.json in Resources */,
 				1AE19E781C7078C70033F087 /* GMLatestJokeCell.xib in Resources */,
+				1ADE80361C72F4C40016E3B2 /* GMLiveViewCell.xib in Resources */,
 				1AB9835D1C59A62800EE31C6 /* LifePageList.json in Resources */,
 				1AD9DEBA1C5206C600444842 /* Main.storyboard in Resources */,
 			);
@@ -699,10 +713,12 @@
 				1AE19E641C7020E30033F087 /* GMHistoryEventDetailController.m in Sources */,
 				1AB22A011C55C51B006A37BC /* GMLiveViewController.m in Sources */,
 				1AB9838A1C5AFCDB00EE31C6 /* GMIndicatorView.m in Sources */,
+				1ADE802E1C72E9CA0016E3B2 /* GMSectionItem.m in Sources */,
 				1AB9836C1C59B6BE00EE31C6 /* GMAccessManager.m in Sources */,
 				1AE19E7B1C7175A90033F087 /* GMJoke.m in Sources */,
 				1AAF0E2A1C52287100696C5C /* GMViewControllerManager.m in Sources */,
 				1AE6EE3B1C52162C008CA2B9 /* GMMenuItem.m in Sources */,
+				1ADE80351C72F4C40016E3B2 /* GMLiveViewCell.m in Sources */,
 				1AE19E6C1C7043BB0033F087 /* GMHistoryViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

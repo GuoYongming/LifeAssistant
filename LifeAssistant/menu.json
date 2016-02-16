@@ -7,8 +7,8 @@
                 "default":true,
                 "uiView":"HomePage",
                 "params":{},
-                "defaultImage":"",
-                "selectedImage":"",
+                "defaultImage":"menu_home_default",
+                "selectedImage":"menu_home_selected",
                 "type":"menuitem"
                 },
                 {
@@ -17,8 +17,8 @@
                 "default":false,
                 "uiView":"LivePage",
                 "params":{},
-                "defaultImage":"",
-                "selectedImage":"",
+                "defaultImage":"menu_live_default",
+                "selectedImage":"menu_live_selected",
                 "type":"menuitem"
                 },
                 {
@@ -27,8 +27,8 @@
                 "default":false,
                 "uiView":"MallPage",
                 "params":{},
-                "defaultImage":"",
-                "selectedImage":"",
+                "defaultImage":"menu_mall_default",
+                "selectedImage":"menu_mall_selected",
                 "type":"menuitem"
                 },
                 {
@@ -37,8 +37,8 @@
                 "default":false,
                 "uiView":"MePage",
                 "params":{},
-                "defaultImage":"",
-                "selectedImage":"",
+                "defaultImage":"menu_me_default",
+                "selectedImage":"menu_me_selected",
                 "type":"menuitem"
                 }
             ],
