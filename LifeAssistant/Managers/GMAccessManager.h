@@ -12,11 +12,13 @@
 @property (nonatomic, copy) NSString *appKey_PhoneLocation;
 @property (nonatomic, copy) NSString *appKey_HistoryToday;
 @property (nonatomic, copy) NSString *appKey_AllJokes;
+@property (nonatomic, copy) NSString *appKey_PersonID;
 
 + (GMAccessManager *)sharedManager;
 
 -(BOOL)isValidateEmail:(NSString *)email;
 -(BOOL)isValidateMobile:(NSString *)mobile;
 -(BOOL)validateCarNo:(NSString *)carNo;
+-(BOOL)validateIdentityCard: (NSString *)identityCard;
 
 @end

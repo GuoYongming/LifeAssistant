@@ -42,6 +42,18 @@
     return [phoneTest evaluateWithObject:mobile];
 }
 
+-(BOOL)validateIdentityCard: (NSString *)identityCard
+{
+    BOOL flag;
+    if (identityCard.length <= 0) {
+        flag = NO;
+        return flag;
+    }
+    NSString *regex2 = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
+    NSPredicate *identityCardPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex2];
+    return [identityCardPredicate evaluateWithObject:identityCard];
+}
+
 -(BOOL)validateCarNo:(NSString *)carNo
 {
     NSString *carRegex = @"^[A-Za-z]{1}[A-Za-z_0-9]{5}$";
@@ -65,4 +77,10 @@
 {
     return @"ffc6bb82b9e8f52cdf0d523b57cee792";
 }
+- (NSString *)appKey_PersonID
+{
+    return @"416b1670372c7f1e51e8bcb8c33ed4e9";
+}
+
+
 @end

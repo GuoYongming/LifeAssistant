@@ -46,6 +46,10 @@
 		1ADE802E1C72E9CA0016E3B2 /* GMSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE802D1C72E9CA0016E3B2 /* GMSectionItem.m */; };
 		1ADE80351C72F4C40016E3B2 /* GMLiveViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE80331C72F4C40016E3B2 /* GMLiveViewCell.m */; };
 		1ADE80361C72F4C40016E3B2 /* GMLiveViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE80341C72F4C40016E3B2 /* GMLiveViewCell.xib */; };
+		1ADE803D1C7307EA0016E3B2 /* GMPersonIDQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE803B1C7307EA0016E3B2 /* GMPersonIDQueryController.m */; };
+		1ADE803E1C7307EA0016E3B2 /* GMPersonIDQueryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE803C1C7307EA0016E3B2 /* GMPersonIDQueryController.xib */; };
+		1ADE80411C730E290016E3B2 /* GMPersonIDQueryProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE80401C730E290016E3B2 /* GMPersonIDQueryProvider.m */; };
+		1ADE80471C7311250016E3B2 /* GMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE80461C7311250016E3B2 /* GMPerson.m */; };
 		1AE19E521C700E6B0033F087 /* GMHistoryEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E501C700E6B0033F087 /* GMHistoryEventController.m */; };
 		1AE19E531C700E6B0033F087 /* GMHistoryEventController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE19E511C700E6B0033F087 /* GMHistoryEventController.xib */; };
 		1AE19E561C700F760033F087 /* GMHistoryEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE19E551C700F760033F087 /* GMHistoryEventProvider.m */; };
@@ -152,6 +156,13 @@
 		1ADE80321C72F4C40016E3B2 /* GMLiveViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLiveViewCell.h; sourceTree = "<group>"; };
 		1ADE80331C72F4C40016E3B2 /* GMLiveViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLiveViewCell.m; sourceTree = "<group>"; };
 		1ADE80341C72F4C40016E3B2 /* GMLiveViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMLiveViewCell.xib; sourceTree = "<group>"; };
+		1ADE803A1C7307EA0016E3B2 /* GMPersonIDQueryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPersonIDQueryController.h; sourceTree = "<group>"; };
+		1ADE803B1C7307EA0016E3B2 /* GMPersonIDQueryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPersonIDQueryController.m; sourceTree = "<group>"; };
+		1ADE803C1C7307EA0016E3B2 /* GMPersonIDQueryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMPersonIDQueryController.xib; sourceTree = "<group>"; };
+		1ADE803F1C730E290016E3B2 /* GMPersonIDQueryProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPersonIDQueryProvider.h; sourceTree = "<group>"; };
+		1ADE80401C730E290016E3B2 /* GMPersonIDQueryProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPersonIDQueryProvider.m; sourceTree = "<group>"; };
+		1ADE80451C7311250016E3B2 /* GMPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPerson.h; sourceTree = "<group>"; };
+		1ADE80461C7311250016E3B2 /* GMPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPerson.m; sourceTree = "<group>"; };
 		1AE19E4F1C700E6B0033F087 /* GMHistoryEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHistoryEventController.h; sourceTree = "<group>"; };
 		1AE19E501C700E6B0033F087 /* GMHistoryEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHistoryEventController.m; sourceTree = "<group>"; };
 		1AE19E511C700E6B0033F087 /* GMHistoryEventController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMHistoryEventController.xib; sourceTree = "<group>"; };
@@ -394,6 +405,8 @@
 				1AE19E671C702ADA0033F087 /* GMHistoryEventDetail.m */,
 				1AE19E791C7175A90033F087 /* GMJoke.h */,
 				1AE19E7A1C7175A90033F087 /* GMJoke.m */,
+				1ADE80451C7311250016E3B2 /* GMPerson.h */,
+				1ADE80461C7311250016E3B2 /* GMPerson.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,6 +421,7 @@
 		1AD9DEE71C5207CF00444842 /* Phone */ = {
 			isa = PBXGroup;
 			children = (
+				1ADE80391C7307BB0016E3B2 /* PersonIDQuery */,
 				1AE19E6E1C70572C0033F087 /* AllJokes */,
 				1AE19E4E1C700E3A0033F087 /* HistoryEvent */,
 				1AB983611C59AAE800EE31C6 /* PhoneLocation */,
@@ -434,6 +448,18 @@
 				1AB983711C5A044E00EE31C6 /* GMDataProvider.m */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		1ADE80391C7307BB0016E3B2 /* PersonIDQuery */ = {
+			isa = PBXGroup;
+			children = (
+				1ADE803A1C7307EA0016E3B2 /* GMPersonIDQueryController.h */,
+				1ADE803B1C7307EA0016E3B2 /* GMPersonIDQueryController.m */,
+				1ADE803C1C7307EA0016E3B2 /* GMPersonIDQueryController.xib */,
+				1ADE803F1C730E290016E3B2 /* GMPersonIDQueryProvider.h */,
+				1ADE80401C730E290016E3B2 /* GMPersonIDQueryProvider.m */,
+			);
+			path = PersonIDQuery;
 			sourceTree = "<group>";
 		};
 		1AE19E4E1C700E3A0033F087 /* HistoryEvent */ = {
@@ -624,6 +650,7 @@
 				1AD9DEBC1C5206C600444842 /* Assets.xcassets in Resources */,
 				1AB229FD1C55B03F006A37BC /* menu.json in Resources */,
 				1AE19E781C7078C70033F087 /* GMLatestJokeCell.xib in Resources */,
+				1ADE803E1C7307EA0016E3B2 /* GMPersonIDQueryController.xib in Resources */,
 				1ADE80361C72F4C40016E3B2 /* GMLiveViewCell.xib in Resources */,
 				1AB9835D1C59A62800EE31C6 /* LifePageList.json in Resources */,
 				1AD9DEBA1C5206C600444842 /* Main.storyboard in Resources */,
@@ -684,6 +711,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ADE80471C7311250016E3B2 /* GMPerson.m in Sources */,
 				1AD9DEE91C5207CF00444842 /* AppDelegate.m in Sources */,
 				1AE19E721C7057A90033F087 /* GMJokeViewController.m in Sources */,
 				1AE19E7E1C7176CE0033F087 /* GMJokeProvider.m in Sources */,
@@ -713,7 +741,9 @@
 				1AE19E641C7020E30033F087 /* GMHistoryEventDetailController.m in Sources */,
 				1AB22A011C55C51B006A37BC /* GMLiveViewController.m in Sources */,
 				1AB9838A1C5AFCDB00EE31C6 /* GMIndicatorView.m in Sources */,
+				1ADE80411C730E290016E3B2 /* GMPersonIDQueryProvider.m in Sources */,
 				1ADE802E1C72E9CA0016E3B2 /* GMSectionItem.m in Sources */,
+				1ADE803D1C7307EA0016E3B2 /* GMPersonIDQueryController.m in Sources */,
 				1AB9836C1C59B6BE00EE31C6 /* GMAccessManager.m in Sources */,
 				1AE19E7B1C7175A90033F087 /* GMJoke.m in Sources */,
 				1AAF0E2A1C52287100696C5C /* GMViewControllerManager.m in Sources */,

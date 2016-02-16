@@ -22,8 +22,8 @@
 {
     NSString *number = [phoneNumber stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if (![[GMAccessManager sharedManager] isValidateMobile:number]) {
-//        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入正确的手机号码" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil] show];
-//        return;
+        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入正确的手机号码" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil] show];
+        return;
     }
     
     NSDictionary *paramas = @{@"phone":number, @"key":[GMAccessManager sharedManager].appKey_PhoneLocation};

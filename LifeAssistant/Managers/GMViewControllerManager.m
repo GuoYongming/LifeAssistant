@@ -76,6 +76,9 @@
         else if ([subviewItem.uiView isEqualToString:@"AllJokes"]){
             classString = @"GMJokeViewController";
         }
+        else if ([subviewItem.uiView isEqualToString:@"CardIdQueryView"]){
+            classString = @"GMPersonIDQueryController";
+        }
         
         Class class = NSClassFromString(classString);
         

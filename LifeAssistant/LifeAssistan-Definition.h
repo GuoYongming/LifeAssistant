@@ -17,5 +17,11 @@
 #define kHistoryEventDetalRequestUrl    @"http://v.juhe.cn/todayOnhistory/queryDetail.php"
 #define kAllJokesDataRequestUrl         @"http://japi.juhe.cn/joke/content/text.from"
 #define kAllJokeImageDataRequestUrl     @"http://japi.juhe.cn/joke/img/text.from"
+#define kPersonIdDetailInfoRequestUrl   @"http://apis.juhe.cn/idcard/index"
+#define kPersonIdLeakInfoRequestUrl     @"http://apis.juhe.cn/idcard/leak"
+#define kPersonIdLossInfoRequestUrl     @"http://apis.juhe.cn/idcard/loss"
+
+
+
 
 
